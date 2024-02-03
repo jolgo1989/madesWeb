@@ -1,0 +1,45 @@
+.hero {
+  position: relative;
+  background-image: linear-gradient(
+    to top,
+    #aed9e0,
+    #78a3b5,
+    #4b6f8b,
+    #293e5f,
+    #111132
+  );
+  height: 100vh;
+
+  .wrapper {
+    max-width: 29.125rem;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    .textContainer {
+      h1 {
+        font-size: 5.5rem;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
+
+    .social {
+      position: absolute;
+      top: 40px; /* Ajusta la distancia desde la parte superior */
+      right: 70px; /* Ajusta la distancia desde la izquierda */
+      display: flex;
+      gap: 20px;
+      font-size: 1.5rem;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
