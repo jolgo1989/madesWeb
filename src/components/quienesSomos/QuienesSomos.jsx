@@ -1,6 +1,6 @@
 import React from "react";
 import "./QuienesSomos.scss";
-import ImgComponent from "./imgComponent";
+import ImgComponent from "./ImgComponent";
 
 const QuienesSomos = () => {
   return (

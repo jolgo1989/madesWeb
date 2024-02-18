@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
 import Typography from "@mui/material/Typography";
-import "./imgComponent.scss";
+import "./ImgComponent.scss";
 
 const images = [
   {
@@ -71,7 +71,7 @@ const ImageBackdrop = styled("span")(({ theme }) => ({
   transition: theme.transitions.create("opacity"),
 }));
 
-const imgComponent = () => {
+const ImgComponent = () => {
   return (
     <Box
       sx={{ display: "flex", flexWrap: "wrap", minWidth: 300, width: "100%" }}
@@ -118,4 +118,4 @@ const imgComponent = () => {
   );
 };
 
-export default imgComponent;
+export default ImgComponent;
