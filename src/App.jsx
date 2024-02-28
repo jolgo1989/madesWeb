@@ -1,6 +1,6 @@
 import Hero from "./components/hero/Hero";
 import QuienesSomos from "./components/quienesSomos/QuienesSomos";
-import TituloNoticias from "./components/noticias/TituloNoticias";
+import Noticias from "./components/noticias/Noticias";
 import "./App.scss";
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
         <QuienesSomos />
       </section>
       <section id="Noticias">
-        <TituloNoticias />
+        <Noticias />
       </section>
       <section id="Proyectos">Hero</section>
       <section id="Contactenos">Hero</section>
