@@ -1,26 +1,26 @@
 import React from "react";
 export const images = [
   {
-    url: "https://www.clinicaveterinariazarpa.com/wp-content/uploads/2020/11/consejos-cuidar-iguana.jpg",
+    url: "https://images.pexels.com/photos/3992949/pexels-photo-3992949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "titulo1",
     Typography:
       " Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
   },
   {
-    url: "https://static.miscota.com/consejos/wp-content/uploads/2016/12/shutterstock_433466308-720x387.jpg",
+    url: "https://images.pexels.com/photos/3207532/pexels-photo-3207532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "titulo2",
     Typography:
       " Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
   },
   {
-    url: "https://media.istockphoto.com/id/622013488/es/foto/drag%C3%B3n-de-mar-chino.webp?b=1&s=170667a&w=0&k=20&c=F8WWe-KY1wGRHEUuIhobTWuw7MTRlCJBn8XZxnt4Ddo=",
+    url: "https://images.pexels.com/photos/3869651/pexels-photo-3869651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "titulo3",
     Typography:
       " Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
   },
   {
-    url: "https://www.clinicaveterinariazarpa.com/wp-content/uploads/2020/11/consejos-cuidar-iguana.jpg",
-    title: "titulo3",
+    url: "https://images.pexels.com/photos/4314674/pexels-photo-4314674.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "titulo4",
     Typography:
       " Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
   },

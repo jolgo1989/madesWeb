@@ -49,7 +49,7 @@ const CardNoticias = () => {
           <CardMedia
             component="img"
             height="140"
-            image="https://www.clinicaveterinariazarpa.com/wp-content/uploads/2020/11/consejos-cuidar-iguana.jpg"
+            image="https://images.pexels.com/photos/2014342/pexels-photo-2014342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="green iguana"
             sx={{ width: "88%" }}
           />
@@ -76,7 +76,7 @@ const CardNoticias = () => {
           <CardMedia
             component="img"
             height="140"
-            image="https://www.clinicaveterinariazarpa.com/wp-content/uploads/2020/11/consejos-cuidar-iguana.jpg"
+            image="https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="green iguana"
           />
           <CardContent>
