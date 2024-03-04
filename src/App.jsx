@@ -1,6 +1,7 @@
 import Hero from "./components/hero/Hero";
 import QuienesSomos from "./components/quienesSomos/QuienesSomos";
 import Noticias from "./components/noticias/Noticias";
+import Proyectos from "./components/proyectos/proyectos";
 import "./App.scss";
 
 const App = () => {
@@ -15,7 +16,9 @@ const App = () => {
       <section id="Noticias">
         <Noticias />
       </section>
-      <section id="Proyectos">Hero</section>
+      <section id="Proyectos">
+        <Proyectos />
+      </section>
       <section id="Contactenos">Hero</section>
     </div>
   );
