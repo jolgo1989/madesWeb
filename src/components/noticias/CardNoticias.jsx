@@ -7,7 +7,6 @@ import {
   CardContent,
   Typography,
 } from "@mui/material";
-
 import { images } from "./Data";
 
 const ImgCard = ({ image }) => {
@@ -44,32 +43,41 @@ const CardNoticias = () => {
         margin: "auto",
       }}
     >
-      <Card sx={{ width: "70%" }}>
-        <CardActionArea sx={{ display: "flex", flexDirection: "row" }}>
-          <CardMedia
-            component="img"
-            height="140"
-            image="https://images.pexels.com/photos/2014342/pexels-photo-2014342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="green iguana"
-            sx={{ width: "88%" }}
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Lizard
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </CardContent>
-        </CardActionArea>
+      <Box
+        sx={{ width: "70%", display: "flex", flexDirection: "column", gap: 1 }}
+      >
+        <Card>
+          <CardActionArea sx={{ display: "flex" }}>
+            <CardMedia
+              component="img"
+              height="140"
+              image="https://images.pexels.com/photos/2014342/pexels-photo-2014342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="green iguana"
+              sx={{ width: "88%" }}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Lizard
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Lizards are a widespread group of squamate reptiles, with over
+                6,000 species, ranging across all continents except Antarctica
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
 
-        <Box sx={{ display: "flex", gap: 1, marginTop: 2 }}>
+        <Box
+          sx={{
+            display: "flex",
+            gap: 1,
+          }}
+        >
           {images.map((image, index) => (
             <ImgCard key={index} image={image} />
           ))}
         </Box>
-      </Card>
+      </Box>
 
       <Card sx={{ width: "30%" }}>
         <CardActionArea>

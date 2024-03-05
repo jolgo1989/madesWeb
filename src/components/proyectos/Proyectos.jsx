@@ -1,5 +1,8 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 import "./Proyectos.scss";
 
 // Datos para los elementos del portafolio
@@ -60,7 +63,9 @@ const Single = ({ items }) => {
           <motion.div className="textContainer" style={{ y }}>
             <h2>{items.title}</h2>
             <p>{items.desc}</p>
-            <button>Read more</button>
+            <Stack spacing={2} direction="row">
+              <Button variant="contained">Read more</Button>
+            </Stack>
           </motion.div>
         </div>
       </div>
