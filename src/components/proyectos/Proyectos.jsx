@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
+import { Stack, Button } from "@mui/material";
 import "./Proyectos.scss";
 
 // Datos para los elementos del portafolio

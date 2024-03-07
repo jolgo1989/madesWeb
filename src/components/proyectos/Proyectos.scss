@@ -4,10 +4,11 @@
     position: sticky;
     top: 0;
     left: 0;
-    padding-left: 50px;
     text-align: center;
     color: orange;
     font-size: 36px;
+    max-width: 1366px; /* Agregado */
+    margin: 0 auto; /* Agregado */
 
     .progressBar {
       height: 10px;
