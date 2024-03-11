@@ -31,6 +31,7 @@ const items = [
   },
   // Agregar más elementos según sea necesario
 ];
+
 // Componente para un solo elemento del portafolio
 const Single = ({ items }) => {
   const ref = useRef();

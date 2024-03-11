@@ -1,28 +1,52 @@
 import React from "react";
 import "./QuienesSomos.scss";
 import ImgComponent from "./ImgComponent";
+import { animate, motion, useInView } from "framer-motion";
+
+// Definición de las variantes de animación para el componente Services
+const variants = {
+  initial: {
+    x: -500,
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 const QuienesSomos = () => {
   return (
-    <div className="about">
+    <motion.div
+      className="about"
+      variants={variants}
+      initial={"initial"}
+      animate={"animate"}
+    >
       <div className="titleAbout">
-        <div className="title">
+        <motion.div className="title" variants={variants}>
           <h1>
             <b>Descubre</b> nuestra
           </h1>
-        </div>
+        </motion.div>
 
-        <div className="title">
+        <motion.div className="title" variants={variants}>
           <h1>
             <b> Historia </b> y Valores
           </h1>
-          <button>¿Quiénes Somos?</button>
-        </div>
+          <motion.button variants={variants}>¿Quiénes Somos?</motion.button>
+        </motion.div>
       </div>
-      <div className="listAbout">
+      <motion.div className="listAbout" variants={variants}>
         <ImgComponent />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
