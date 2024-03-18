@@ -1,11 +1,30 @@
 import React from "react";
 import "./Noticias.scss";
 import CardNoticias from "./CardNoticias";
+import { animate, motion, useInView } from "framer-motion";
+
+const variants = {
+  initial: { opacity: 0, scale: 0.5 },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      delay: 0.5,
+      ease: [0, 0.71, 0.2, 1.01],
+    },
+  },
+};
 
 const Noticias = () => {
   return (
     <div className="titleContainer">
-      <div className="title">
+      <motion.div
+        className="title"
+        variants={variants}
+        initial={"initial"}
+        animate={"animate"}
+      >
         <div className="subTitle">
           <h1>
             Explora las últimas <b>noticias</b>
@@ -18,8 +37,8 @@ const Noticias = () => {
             cum non, fugit ullam, dolorum eius
           </p>
         </div>
-      </div>
-      <CardNoticias />
+        <CardNoticias />
+      </motion.div>
     </div>
   );
 };
