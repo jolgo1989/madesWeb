@@ -72,6 +72,17 @@ const Single = ({ items }) => {
   );
 };
 
+const variants = {
+  initial: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      delay: 0.5,
+    },
+  },
+};
+
 const Proyectos = () => {
   const ref = useRef();
 
@@ -96,9 +107,11 @@ const Proyectos = () => {
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
       {/* Mapeo a través del array de items y renderizando cada componente Single */}
-      {items.map((item) => (
-        <Single items={item} key={item.id} />
-      ))}
+      <motion.div variants={variants} initial={"initial"} animate={"animate"}>
+        {items.map((item) => (
+          <Single items={item} key={item.id} />
+        ))}
+      </motion.div>
     </div>
   );
 };

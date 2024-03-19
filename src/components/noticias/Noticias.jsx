@@ -3,7 +3,7 @@ import "./Noticias.scss";
 import CardNoticias from "./CardNoticias";
 import { animate, motion, useInView } from "framer-motion";
 
-const variants = {
+const titleVariants = {
   initial: { opacity: 0, scale: 0.5 },
   animate: {
     opacity: 1,
@@ -16,12 +16,23 @@ const variants = {
   },
 };
 
+const variants = {
+  initial: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      delay: 0.5,
+    },
+  },
+};
+
 const Noticias = () => {
   return (
     <div className="titleContainer">
       <motion.div
         className="title"
-        variants={variants}
+        variants={titleVariants}
         initial={"initial"}
         animate={"animate"}
       >
@@ -37,6 +48,8 @@ const Noticias = () => {
             cum non, fugit ullam, dolorum eius
           </p>
         </div>
+      </motion.div>
+      <motion.div variants={variants} initial={"initial"} animate={"animate"}>
         <CardNoticias />
       </motion.div>
     </div>
