@@ -60,21 +60,15 @@ const Hero = () => {
           </a>
         </div>
 
-        <motion.div
-          initial="initial"
-          animate="animate"
-          className="textContainer"
-        >
-          <motion.h1 variants={textVariants}>MADES </motion.h1>
-          <motion.h2 variants={textVariants}>
-            ETNOEDUCACIÓN DESDE EL TERRITORIO
-          </motion.h2>
-          <motion.p variants={textVariants}>
+        <div initial="initial" animate="animate" className="textContainer">
+          <h1>MADES </h1>
+          <h2>ETNOEDUCACIÓN DESDE EL TERRITORIO</h2>
+          {/* <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
             atque nobis illum, consequuntur excepturi voluptatum voluptates.
             Maiores ut voluptatum impedit quod.
-          </motion.p>
-        </motion.div>
+          </p> */}
+        </div>
       </div>
     </div>
   );
