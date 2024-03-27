@@ -8,65 +8,14 @@ import {
   FaRegUser,
 } from "react-icons/fa6";
 import SideBar from "../sidebar/SideBar";
-import { motion } from "framer-motion";
-
-// Variantes de animación para el componente motion.div
-const variants = {
-  initial: { opacity: 0 },
-  animate: {
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      delay: 0.5,
-    },
-  },
-};
-
-const iconsVariants = {
-  hover: {
-    scale: 1.1,
-    transition: {
-      type: "spring",
-      stiffness: 400,
-      damping: 10,
-    },
-  },
-  pressed: { scale: 0.95 },
-  animate: {
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 400,
-      damping: 10,
-    },
-  },
-};
-
-const Icon = ({ href, children }) => {
-  return (
-    <motion.a
-      href={href}
-      variants={iconsVariants}
-      whileHover="hover"
-      whileTap="pressed"
-      animate="animate"
-    >
-      {children}
-    </motion.a>
-  );
-};
+import { ArrowIcon, Icon, HeroTransition } from "./HeroVariants";
 
 const Hero = () => {
   return (
     <div className="hero">
       {/* Menu */}
       <SideBar />
-      <motion.div
-        className="wrapper"
-        variants={variants}
-        initial={"initial"}
-        animate={"animate"}
-      >
+      <HeroTransition>
         <div className="social">
           <Icon href="#">
             <FaInstagram />
@@ -93,17 +42,11 @@ const Hero = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
             atque nobis illum, consequuntur excepturi voluptatum voluptates.
           </p>
-          <motion.div
-            className="arrowicon"
-            variants={iconsVariants}
-            whileHover="hover"
-            whileTap={"pressed"} // Esto es opcional, pero añade una escala cuando se hace clic
-            animate={"animate"} // Añadir esto para asegurarse de que la transición también se aplica cuando se retira el mouse
-          >
+          <ArrowIcon>
             <img src="public/arrow.png" alt="ArrowIcon" />
-          </motion.div>
+          </ArrowIcon>
         </div>
-      </motion.div>
+      </HeroTransition>
     </div>
   );
 };
