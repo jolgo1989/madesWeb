@@ -5,7 +5,6 @@ import {
   FaSquareFacebook,
   FaYoutube,
   FaInstagram,
-  FaRegUser,
 } from "react-icons/fa6";
 import SideBar from "../sidebar/SideBar";
 import { ArrowIcon, Icon, HeroTransition } from "./HeroVariants";
@@ -29,9 +28,6 @@ const Hero = () => {
           <Icon href="#">
             <FaYoutube />
           </Icon>
-          <Icon href="#">
-            <FaRegUser />
-          </Icon>
         </div>
 
         <div className="textContainer">
@@ -42,7 +38,7 @@ const Hero = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
             atque nobis illum, consequuntur excepturi voluptatum voluptates.
           </p>
-          <ArrowIcon>
+          <ArrowIcon href={`#Contactenos`}>
             <img src="public/arrow.png" alt="ArrowIcon" />
           </ArrowIcon>
         </div>

@@ -63,9 +63,10 @@ export const Icon = ({ href, children }) => {
  * Este componente representa un ícono de flecha que puede ser animado al interactuar con él.
  * @param {ReactNode} children - Los elementos hijos del componente.
  */
-export const ArrowIcon = ({ children }) => {
+export const ArrowIcon = ({ href, children }) => {
   return (
-    <motion.div
+    <motion.a
+      href={href}
       className="arrowicon"
       variants={iconsVariants}
       whileHover="hover"
@@ -73,7 +74,7 @@ export const ArrowIcon = ({ children }) => {
       animate="animate"
     >
       {children}
-    </motion.div>
+    </motion.a>
   );
 };
 
