@@ -42,6 +42,20 @@ const iconsVariants = {
   },
 };
 
+const Icon = ({ href, children }) => {
+  return (
+    <motion.a
+      href={href}
+      variants={iconsVariants}
+      whileHover="hover"
+      whileTap="pressed"
+      animate="animate"
+    >
+      {children}
+    </motion.a>
+  );
+};
+
 const Hero = () => {
   return (
     <div className="hero">
@@ -54,21 +68,21 @@ const Hero = () => {
         animate={"animate"}
       >
         <div className="social">
-          <motion.a href="#">
+          <Icon href="#">
             <FaInstagram />
-          </motion.a>
-          <motion.a href="#">
+          </Icon>
+          <Icon href="#">
             <FaSquareFacebook />
-          </motion.a>
-          <a href="#">
+          </Icon>
+          <Icon href="#">
             <FaSquareXTwitter />
-          </a>
-          <a href="#">
+          </Icon>
+          <Icon href="#">
             <FaYoutube />
-          </a>
-          <a href="#">
+          </Icon>
+          <Icon href="#">
             <FaRegUser />
-          </a>
+          </Icon>
         </div>
 
         <div className="textContainer">
