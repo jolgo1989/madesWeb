@@ -22,6 +22,26 @@ const variants = {
   },
 };
 
+const iconsVariants = {
+  hover: {
+    scale: 1.1,
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 10,
+    },
+  },
+  pressed: { scale: 0.95 },
+  animate: {
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 10,
+    },
+  },
+};
+
 const Hero = () => {
   return (
     <div className="hero">
@@ -34,12 +54,12 @@ const Hero = () => {
         animate={"animate"}
       >
         <div className="social">
-          <a href="#">
+          <motion.a href="#">
             <FaInstagram />
-          </a>
-          <a href="#">
+          </motion.a>
+          <motion.a href="#">
             <FaSquareFacebook />
-          </a>
+          </motion.a>
           <a href="#">
             <FaSquareXTwitter />
           </a>
@@ -61,8 +81,10 @@ const Hero = () => {
           </p>
           <motion.div
             className="arrowicon"
-            whileHover={{ scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            variants={iconsVariants}
+            whileHover="hover"
+            whileTap={"pressed"} // Esto es opcional, pero añade una escala cuando se hace clic
+            animate={"animate"} // Añadir esto para asegurarse de que la transición también se aplica cuando se retira el mouse
           >
             <img src="public/arrow.png" alt="ArrowIcon" />
           </motion.div>
