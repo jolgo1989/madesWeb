@@ -49,7 +49,12 @@ const Noticias = () => {
           </p>
         </div>
       </motion.div>
-      <motion.div variants={variants} initial={"initial"} animate={"animate"}>
+      <motion.div
+        variants={variants}
+        initial={"initial"}
+        animate={"animate"}
+        className="card"
+      >
         <CardNoticias />
       </motion.div>
     </div>
