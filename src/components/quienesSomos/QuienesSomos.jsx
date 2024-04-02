@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./QuienesSomos.scss";
 import ImgComponent from "./ImgComponent";
 import { animate, motion, useInView } from "framer-motion";
@@ -10,7 +10,7 @@ const titleVariants = {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.8,
+      duration: 0.5,
       delay: 0.5,
       ease: [0, 0.71, 0.2, 1.01],
     },
@@ -22,20 +22,26 @@ const variants = {
   animate: {
     opacity: 1,
     transition: {
-      duration: 0.8,
+      duration: 0.5,
       delay: 0.5,
     },
   },
 };
 
 const QuienesSomos = () => {
+  const ref = useRef();
+
+  const isInView = useInView(ref, { margin: "400px" });
+
   return (
     <div className="about">
       <motion.div
         className="titleAbout"
         variants={titleVariants}
         initial={"initial"}
-        animate={"animate"}
+        // animate={"animate"}
+        ref={ref}
+        animate={isInView && "animate"}
       >
         <div className="title">
           <h1>
@@ -54,7 +60,9 @@ const QuienesSomos = () => {
         className="listAbout"
         variants={variants}
         initial={"initial"}
-        animate={"animate"}
+        // animate={"animate"}
+        ref={ref}
+        animate={isInView && "animate"}
       >
         <ImgComponent />
       </motion.div>
