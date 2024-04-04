@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Noticias.scss";
 import CardNoticias from "./CardNoticias";
 import { animate, motion, useInView } from "framer-motion";
@@ -28,13 +28,18 @@ const variants = {
 };
 
 const Noticias = () => {
+  const ref = useRef();
+
+  const isInView = useInView(ref, { margin: "400px" });
   return (
     <div className="titleContainer">
       <motion.div
         className="title"
         variants={titleVariants}
         initial={"initial"}
-        animate={"animate"}
+        // animate={"animate"}
+        ref={ref}
+        animate={isInView && "animate"}
       >
         <div className="subTitle">
           <h1>
@@ -52,8 +57,10 @@ const Noticias = () => {
       <motion.div
         variants={variants}
         initial={"initial"}
-        animate={"animate"}
+        // animate={"animate"}
         className="card"
+        ref={ref}
+        animate={isInView && "animate"}
       >
         <CardNoticias />
       </motion.div>
