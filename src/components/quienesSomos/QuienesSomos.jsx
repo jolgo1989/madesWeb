@@ -1,47 +1,23 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import "./QuienesSomos.scss";
 import ImgComponent from "./ImgComponent";
-import { animate, motion, useInView } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 // Definición de las variantes de animación para el componente Services
-const titleVariants = {
-  initial: { opacity: 0, scale: 0.5 },
-  animate: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-      delay: 0.5,
-      ease: [0, 0.71, 0.2, 1.01],
-    },
-  },
-};
-
-const variants = {
-  initial: { opacity: 0 },
-  animate: {
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      delay: 0.5,
-    },
-  },
-};
 
 const QuienesSomos = () => {
-  const ref = useRef();
-
-  const isInView = useInView(ref, { margin: "400px" });
-
   return (
     <div className="about">
       <motion.div
         className="titleAbout"
-        variants={titleVariants}
-        initial={"initial"}
-        // animate={"animate"}
-        ref={ref}
-        animate={isInView && "animate"}
+        initial={{ opacity: 0, y: 75 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          ease: "linear",
+          duration: 1,
+          y: { duration: 0.5 },
+        }}
       >
         <div className="title">
           <h1>
@@ -58,11 +34,14 @@ const QuienesSomos = () => {
       </motion.div>
       <motion.div
         className="listAbout"
-        variants={variants}
-        initial={"initial"}
-        // animate={"animate"}
-        ref={ref}
-        animate={isInView && "animate"}
+        initial={{ opacity: 0, y: 75 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          ease: "linear",
+          duration: 1.5,
+          y: { duration: 1 },
+        }}
       >
         <ImgComponent />
       </motion.div>

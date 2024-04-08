@@ -7,14 +7,16 @@ import {
   FaInstagram,
 } from "react-icons/fa6";
 import SideBar from "../sidebar/SideBar";
-import { ArrowIcon, Icon, HeroTransition } from "./HeroVariants";
+import { ArrowIcon, Icon } from "../../Variants";
+
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
     <div className="hero">
       {/* Menu */}
       <SideBar />
-      <HeroTransition>
+      <div className="wrapper">
         <div className="social">
           <Icon href="#">
             <FaInstagram />
@@ -30,7 +32,16 @@ const Hero = () => {
           </Icon>
         </div>
 
-        <div className="textContainer">
+        <motion.div
+          className="textContainer"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 1,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
           <h1>MADES </h1>
           <h2>ETNOEDUCACIÓN DESDE EL TERRITORIO </h2>
 
@@ -41,8 +52,8 @@ const Hero = () => {
           <ArrowIcon href={`#Contactenos`}>
             <img src="public/arrow.png" alt="ArrowIcon" />
           </ArrowIcon>
-        </div>
-      </HeroTransition>
+        </motion.div>
+      </div>
     </div>
   );
 };
