@@ -1,12 +1,16 @@
 import React, { useRef, useEffect } from "react";
 import "./QuienesSomos.scss";
 import ImgComponent from "./ImgComponent";
-import { TitleTransition, CardTransition } from "../../Variants";
+import { TitleTransition } from "../../Variants";
 
 const QuienesSomos = () => {
   return (
     <div className="about">
-      <TitleTransition titleClassName={"titleAbout"}>
+      <TitleTransition
+        titleClassName={"titleAbout"}
+        transitionTime={1}
+        effectDuration={0.5}
+      >
         <div className="title">
           <h1>
             <b>Descubre</b> nuestra
@@ -20,9 +24,13 @@ const QuienesSomos = () => {
           <button>¿Quiénes Somos?</button>
         </div>
       </TitleTransition>
-      <CardTransition titleClassName={"listAbout"}>
+      <TitleTransition
+        titleClassName={"listAbout"}
+        transitionTime={1.5}
+        effectDuration={1}
+      >
         <ImgComponent />
-      </CardTransition>
+      </TitleTransition>
     </div>
   );
 };

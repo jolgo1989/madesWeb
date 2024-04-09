@@ -85,7 +85,12 @@ export const TextHero = ({ children }) => {
   );
 };
 
-export const TitleTransition = ({ children, titleClassName }) => {
+export const TitleTransition = ({
+  children,
+  titleClassName,
+  transitionTime,
+  effectDuration,
+}) => {
   return (
     <motion.div
       className={titleClassName}
@@ -94,26 +99,8 @@ export const TitleTransition = ({ children, titleClassName }) => {
       viewport={{ once: true }}
       transition={{
         ease: "linear",
-        duration: 1,
-        y: { duration: 0.5 },
-      }}
-    >
-      {children}
-    </motion.div>
-  );
-};
-
-export const CardTransition = ({ children, titleClassName }) => {
-  return (
-    <motion.div
-      className={titleClassName}
-      initial={{ opacity: 0, y: 75 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{
-        ease: "linear",
-        duration: 1.5,
-        y: { duration: 1 },
+        duration: transitionTime,
+        y: { duration: effectDuration },
       }}
     >
       {children}

@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { Stack, Button } from "@mui/material";
 import "./Proyectos.scss";
 
-import { CardTransition } from "../../Variants";
+import { TitleTransition } from "../../Variants";
 
 // Datos para los elementos del portafolio
 const items = [
@@ -109,11 +109,11 @@ const Proyectos = () => {
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
       {/* Mapeo a través del array de items y renderizando cada componente Single */}
-      <CardTransition>
+      <TitleTransition transitionTime={1.5} effectDuration={1}>
         {items.map((item) => (
           <Single items={item} key={item.id} />
         ))}
-      </CardTransition>
+      </TitleTransition>
     </div>
   );
 };

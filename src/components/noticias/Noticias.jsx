@@ -1,12 +1,16 @@
 import React, { useRef } from "react";
 import "./Noticias.scss";
 import CardNoticias from "./CardNoticias";
-import { TitleTransition, CardTransition } from "../../Variants";
+import { TitleTransition } from "../../Variants";
 
 const Noticias = () => {
   return (
     <div className="titleContainer">
-      <TitleTransition titleClassName={"title"}>
+      <TitleTransition
+        titleClassName={"title"}
+        transitionTime={1}
+        effectDuration={0.5}
+      >
         <div className="subTitle">
           <h1>
             Explora las últimas <b>noticias</b>
@@ -20,9 +24,13 @@ const Noticias = () => {
           </p>
         </div>
       </TitleTransition>
-      <CardTransition titleClassName={"card"}>
+      <TitleTransition
+        titleClassName={"card"}
+        transitionTime={1.5}
+        effectDuration={1}
+      >
         <CardNoticias />
-      </CardTransition>
+      </TitleTransition>
     </div>
   );
 };
