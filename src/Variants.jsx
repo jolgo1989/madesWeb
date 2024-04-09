@@ -85,7 +85,7 @@ export const TextHero = ({ children }) => {
   );
 };
 
-export const TitleTransition = ({
+export const Transition = ({
   children,
   titleClassName,
   transitionTime,

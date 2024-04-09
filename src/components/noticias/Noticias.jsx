@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import "./Noticias.scss";
 import CardNoticias from "./CardNoticias";
-import { TitleTransition } from "../../Variants";
+import { Transition } from "../../Variants";
 
 const Noticias = () => {
   return (
     <div className="titleContainer">
-      <TitleTransition
+      <Transition
         titleClassName={"title"}
         transitionTime={1}
         effectDuration={0.5}
@@ -23,14 +23,14 @@ const Noticias = () => {
             cum non, fugit ullam, dolorum eius
           </p>
         </div>
-      </TitleTransition>
-      <TitleTransition
+      </Transition>
+      <Transition
         titleClassName={"card"}
         transitionTime={1.5}
         effectDuration={1}
       >
         <CardNoticias />
-      </TitleTransition>
+      </Transition>
     </div>
   );
 };

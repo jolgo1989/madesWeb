@@ -6,7 +6,7 @@ import "./App.scss";
 
 const App = () => {
   return (
-    <div>
+    <>
       <section id="Inicio">
         <Hero />
       </section>
@@ -20,7 +20,7 @@ const App = () => {
         <Proyectos />
       </section>
       <section id="Contactenos">Hero</section>
-    </div>
+    </>
   );
 };
 
