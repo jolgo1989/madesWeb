@@ -1,46 +1,12 @@
 import React, { useRef } from "react";
 import "./Noticias.scss";
 import CardNoticias from "./CardNoticias";
-import { animate, motion, useInView } from "framer-motion";
-
-const titleVariants = {
-  initial: { opacity: 0, scale: 0.5 },
-  animate: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.8,
-      delay: 0.5,
-      ease: [0, 0.71, 0.2, 1.01],
-    },
-  },
-};
-
-const variants = {
-  initial: { opacity: 0 },
-  animate: {
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      delay: 0.5,
-    },
-  },
-};
+import { TitleTransition, CardTransition } from "../../Variants";
 
 const Noticias = () => {
-  const ref = useRef();
-
-  const isInView = useInView(ref, { margin: "400px" });
   return (
     <div className="titleContainer">
-      <motion.div
-        className="title"
-        variants={titleVariants}
-        initial={"initial"}
-        // animate={"animate"}
-        ref={ref}
-        animate={isInView && "animate"}
-      >
+      <TitleTransition titleClassName={"title"}>
         <div className="subTitle">
           <h1>
             Explora las últimas <b>noticias</b>
@@ -53,17 +19,10 @@ const Noticias = () => {
             cum non, fugit ullam, dolorum eius
           </p>
         </div>
-      </motion.div>
-      <motion.div
-        variants={variants}
-        initial={"initial"}
-        // animate={"animate"}
-        className="card"
-        ref={ref}
-        animate={isInView && "animate"}
-      >
+      </TitleTransition>
+      <CardTransition titleClassName={"card"}>
         <CardNoticias />
-      </motion.div>
+      </CardTransition>
     </div>
   );
 };
