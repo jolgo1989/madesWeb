@@ -7,7 +7,7 @@ import {
   CardContent,
   Typography,
 } from "@mui/material";
-import { images } from "./Data";
+import { images } from "./NewsData";
 
 const ImgCard = ({ image }) => {
   return (

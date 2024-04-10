@@ -1,4 +1,3 @@
-import React from "react";
 export const images = [
   {
     url: "https://images.pexels.com/photos/4613878/pexels-photo-4613878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",

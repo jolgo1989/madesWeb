@@ -16,10 +16,8 @@ const App = () => {
       <section id="Noticias">
         <Noticias />
       </section>
-      <section id="Proyectos">
-        <Proyectos />
-      </section>
-      <section id="Contactenos">Hero</section>
+      <Proyectos />
+      <section id="Contactenos">Hola</section>
     </>
   );
 };

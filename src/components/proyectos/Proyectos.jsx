@@ -1,38 +1,9 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { Stack, Button } from "@mui/material";
-import "./Proyectos.scss";
-
 import { Transition } from "../../Variants";
-
-// Datos para los elementos del portafolio
-const items = [
-  {
-    id: 1,
-    title: "Proyecto#1",
-    img: "https://images.pexels.com/photos/3894383/pexels-photo-3894383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    desc: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum asperiores itaque similique nisi impedit, illum architecto ratione consequatur aspernatur velit eveniet saepe! Molestias quisquam officia recusandae accusantium porro, alias dolores.",
-  },
-  {
-    id: 2,
-    title: "Proyecto#2",
-    img: "https://images.pexels.com/photos/3992949/pexels-photo-3992949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    desc: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum asperiores itaque similique nisi impedit, illum architecto ratione consequatur aspernatur velit eveniet saepe! Molestias quisquam officia recusandae accusantium porro, alias dolores.",
-  },
-  {
-    id: 3,
-    title: "Proyecto#3",
-    img: "https://images.pexels.com/photos/3894378/pexels-photo-3894378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    desc: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum asperiores itaque similique nisi impedit, illum architecto ratione consequatur aspernatur velit eveniet saepe! Molestias quisquam officia recusandae accusantium porro, alias dolores.",
-  },
-  {
-    id: 4,
-    title: "Proyecto#4",
-    img: "https://images.pexels.com/photos/4262167/pexels-photo-4262167.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    desc: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum asperiores itaque similique nisi impedit, illum architecto ratione consequatur aspernatur velit eveniet saepe! Molestias quisquam officia recusandae accusantium porro, alias dolores.",
-  },
-  // Agregar más elementos según sea necesario
-];
+import { items } from "./ProjectData";
+import "./Proyectos.scss";
 
 // Componente para un solo elemento del portafolio
 const Single = ({ items }) => {
@@ -74,17 +45,6 @@ const Single = ({ items }) => {
   );
 };
 
-const variants = {
-  initial: { opacity: 0 },
-  animate: {
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      delay: 0.5,
-    },
-  },
-};
-
 const Proyectos = () => {
   const ref = useRef();
 
@@ -102,7 +62,7 @@ const Proyectos = () => {
     damping: 30,
   });
   return (
-    <div className="proyectos" ref={ref}>
+    <div id="Proyectos" className="proyectos" ref={ref}>
       <div className="progress">
         <h1>Proyectos</h1>
         {/* Div con animación de escala en X basada en el progreso del desplazamiento */}
