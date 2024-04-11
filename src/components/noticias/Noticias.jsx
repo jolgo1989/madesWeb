@@ -5,7 +5,7 @@ import { Transition } from "../../Variants";
 
 const Noticias = () => {
   return (
-    <div className="titleContainer">
+    <div className="newsContainer">
       <Transition
         titleClassName={"title"}
         transitionTime={1}

@@ -2,6 +2,7 @@ import Hero from "./components/hero/Hero";
 import QuienesSomos from "./components/quienesSomos/QuienesSomos";
 import Noticias from "./components/noticias/Noticias";
 import Proyectos from "./components/proyectos/proyectos";
+import Contacts from "./components/contacto/Contacts";
 import "./App.scss";
 
 const App = () => {
@@ -17,7 +18,9 @@ const App = () => {
         <Noticias />
       </section>
       <Proyectos />
-      <section id="Contactenos">Hola</section>
+      <section id="Contactenos">
+        <Contacts />
+      </section>
     </>
   );
 };

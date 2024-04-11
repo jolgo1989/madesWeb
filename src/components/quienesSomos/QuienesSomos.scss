@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 
   .titleAbout {
     flex: 2;
@@ -11,39 +12,57 @@
     flex-direction: column;
     align-items: center;
 
-    .title {
+    .principalTitle {
       display: flex;
       align-items: center;
       gap: 50px;
 
-      img {
-        width: 300px;
-        height: 100px;
-        border-radius: 50px;
-        object-fit: cover;
-      }
       h1 {
-        font-size: 95px;
+        font-size: 56px;
         font-weight: 100;
-      }
-
-      button {
-        width: 300px;
-        height: 100px;
-        border-radius: 50px;
-        background-color: #ffa500;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
+        padding-top: 5rem;
       }
     }
   }
 
+  .titleAbout::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 100px;
+    left: 50%;
+    margin-left: 1px;
+    background-color: #da9f5b;
+  }
+
   .listAbout {
-    flex: 2;
+    flex: 20;
     display: flex;
     max-width: 1366px;
     width: 100%;
     margin: auto;
+
+    .textAbout {
+      padding: 3rem 1.5rem;
+      margin-top: 50px;
+
+      h1 {
+        font-size: 2.3rem;
+        margin: 0 0 16px;
+      }
+      h2 {
+        font-size: 1.6rem;
+        color: #33211d;
+        margin: 0 0 16px;
+      }
+      p {
+        color: #555555;
+        font-size: 1.3rem;
+        margin: 0 0 16px;
+      }
+    }
+    img {
+      width: 480px;
+    }
   }
 }
