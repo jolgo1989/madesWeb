@@ -16,13 +16,6 @@ const Noticias = () => {
             Explora las últimas <b>noticias</b>
           </h1>
         </div>
-
-        <div className="textTitle">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-            cum non, fugit ullam, dolorum eius
-          </p>
-        </div>
       </Transition>
       <Transition
         titleClassName={"card"}

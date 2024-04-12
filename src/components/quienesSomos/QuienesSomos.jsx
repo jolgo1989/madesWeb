@@ -1,6 +1,6 @@
 import React from "react";
 import ImgComponent from "./ImgComponent";
-import { Transition } from "../../Variants";
+import { Transition, Icon } from "../../Variants";
 import { Stack, Button } from "@mui/material";
 import { FaCheck } from "react-icons/fa"; // Importa el icono de chulo de React Icons
 import "./QuienesSomos.scss";
@@ -56,7 +56,7 @@ const QuienesSomos = () => {
             <li>Lorem ipsum dolor sit amet</li>
           </div>
 
-          <Stack spacing={2} direction="row">
+          <Stack Stack spacing={2} direction="row">
             <Button variant="contained">Read more</Button>
           </Stack>
         </div>

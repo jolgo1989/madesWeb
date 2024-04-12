@@ -4,6 +4,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+
+  .newsContainer::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 70px;
+    left: 50%;
+    margin-left: 1px;
+    margin-top: 10px;
+    background-color: #da9f5b;
+  }
 
   .title {
     flex: 2;
@@ -19,8 +31,20 @@
       h1 {
         font-size: 95px;
         font-weight: 100;
+        padding-top: 5rem;
       }
     }
+  }
+
+  .title::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 70px;
+    left: 50%;
+    margin-left: 1px;
+    margin-top: 10px;
+    background-color: #da9f5b;
   }
 
   .card {
