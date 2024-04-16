@@ -10,22 +10,35 @@
     height: 100%;
     max-width: 1366px;
     margin: auto;
+    padding: 0 2%;
+
+    .social {
+      position: absolute;
+      top: 10px; /* Ajusta la distancia desde la parte superior */
+      right: 2%; /* Ajusta la distancia desde la izquierda */
+      display: flex;
+      gap: 20px;
+      font-size: 1.7rem;
+
+      a {
+        color: #fff;
+      }
+    }
 
     .textContainer {
-      // padding-left: 10em;
       padding-top: 17em;
+      max-width: 48rem;
 
       h1 {
-        font-size: 10.5rem;
+        font-size: clamp(5rem, 3.0301rem + 9.6386vi, 10.5rem);
       }
 
       h2 {
-        font-size: 2.5rem;
+        font-size: clamp(1.25rem, 0.8023rem + 2.1906vi, 2.5rem);
       }
 
       p {
-        max-width: 48rem;
-        font-size: 1.1rem;
+        font-size: clamp(1rem, 0.8209rem + 0.8762vi, 1.5rem);
       }
 
       .arrowicon {
@@ -38,19 +51,6 @@
         justify-content: center;
         margin-top: 2%;
         cursor: pointer;
-      }
-    }
-
-    .social {
-      position: absolute;
-      top: 40px; /* Ajusta la distancia desde la parte superior */
-      right: 0; /* Ajusta la distancia desde la izquierda */
-      display: flex;
-      gap: 20px;
-      font-size: 1.7rem;
-
-      a {
-        color: #fff;
       }
     }
   }
