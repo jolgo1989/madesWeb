@@ -10,14 +10,14 @@ const App = () => {
       <section id="Inicio">
         <Hero />
       </section>
-      <section id="Quienes Somos">
+      {/* <section id="Quienes Somos">
         <QuienesSomos />
-      </section>
-      <section id="Noticias">
+      </section> */}
+      {/* <section id="Noticias">
         <Noticias />
-      </section>
-      <Proyectos />
-      <section id="Contactenos">Contacts</section>
+      </section> */}
+      {/* <Proyectos /> */}
+      {/* <section id="Contactenos">Contacts</section> */}
     </>
   );
 };

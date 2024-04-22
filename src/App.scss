@@ -3,27 +3,6 @@ html {
   scroll-behavior: smooth;
 }
 
-//Personalizar la barra laterial
-// ::-webkit-scrollbar {
-//   width: 1em;
-// }
-
-// ::-webkit-scrollbar-track {
-//   background: #111132;
-//   border-radius: 100vw;
-//   margin-block: 0.5em;
-// }
-
-// ::-webkit-scrollbar-thumb {
-//   background: #9ba4b5;
-//   border: 0.25em solid #111132;
-//   border-radius: 100vw;
-// }
-
-// ::-webkit-scrollbar-thumb:hover {
-//   background: hsl(120, 1%, 33%);
-// }
-
 * {
   padding: 0;
   margin: 0;
@@ -41,21 +20,18 @@ section {
   height: 100vh;
 }
 
-// .app {
-//   //Fondo de color
-//   background-image: linear-gradient(
-//     to left top,
-//     #aed9e0,
-//     #78a3b5,
-//     #4b6f8b,
-//     #293e5f,
-//     #111132
-//   );
-
-//   //Text color
-//   color: #fff;
-//   height: 100vh;
-
-//   //Button color
-//   // color: #00c9b7;
-// }
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
