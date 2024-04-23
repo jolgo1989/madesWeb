@@ -7,18 +7,14 @@
   background-size: cover;
   background-position: center;
 
-  // @include mobile {
-  //   width: 100%;
-  // }
-
-  .wrapper {
+  .hero__wrapper {
     position: relative;
     height: 100%;
     max-width: 1366px;
     margin: auto;
     padding: 0 2%;
 
-    .social {
+    .hero__social {
       position: absolute;
       top: 25px; /* Ajusta la distancia desde la parte superior */
       right: 2%; /* Ajusta la distancia desde la izquierda */
@@ -31,7 +27,7 @@
       }
     }
 
-    .textContainer {
+    .hero__textContainer {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -54,7 +50,7 @@
         font-size: clamp(1rem, 0.8209rem + 0.8762vi, 1.5rem);
       }
 
-      .arrowicon {
+      .textContainer__arrowIcon {
         background: #e91e63;
         width: 70px;
         min-height: 70px;
@@ -65,7 +61,7 @@
         margin-top: 2%;
         cursor: pointer;
 
-        @include mobile {
+        @include tablet {
           display: none;
         }
       }

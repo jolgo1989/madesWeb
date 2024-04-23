@@ -44,7 +44,7 @@ export const ArrowIcon = ({ href, children }) => {
   return (
     <motion.a
       href={href}
-      className="arrowicon"
+      className="textContainer__arrowIcon"
       whileHover={{
         scale: 1.1,
         transition: {
@@ -71,7 +71,7 @@ export const ArrowIcon = ({ href, children }) => {
 export const TextHero = ({ children }) => {
   return (
     <motion.div
-      className="textContainer"
+      className="hero__textContainer"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
