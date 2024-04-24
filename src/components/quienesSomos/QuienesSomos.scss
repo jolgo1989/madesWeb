@@ -1,81 +1,71 @@
+@import "../../App.scss";
+
 .about {
   background: linear-gradient(180deg, #0c0c1d, #111132);
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  margin: auto;
+  // justify-content: center;
+  // align-items: center;
+  // align-content: center;
   position: relative;
+  max-width: 1366px;
 
   .titleAbout {
-    flex: 2;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
+    margin-bottom: 5%;
 
-    .title {
-      display: flex;
-      align-items: center;
-      gap: 50px;
+    h1 {
+      font-size: clamp(2.5rem, 1.2688rem + 6.0241vi, 5.9375rem);
+      font-weight: 100;
+      padding-top: 5rem;
+    }
 
-      h1 {
-        font-size: 95px;
-        font-weight: 100;
-        padding-top: 5rem;
-      }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 70px;
+      left: 50%;
+      margin-left: 1px;
+      margin-top: 10px;
+      background-color: #da9f5b;
     }
   }
 
-  .titleAbout::after {
-    position: absolute;
-    content: "";
-    width: 2px;
-    height: 70px;
-    left: 50%;
-    margin-left: 1px;
-    margin-top: 10px;
-    background-color: #da9f5b;
-  }
-
   .listAbout {
-    flex: 20;
     display: flex;
-    max-width: 1366px;
-    width: 100%;
-    margin: auto;
+    justify-content: space-around; //!este
 
     .textAbout {
-      padding: 3rem 1.5rem;
-      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      // max-width: 350px;
 
       h1 {
         font-size: 2.3rem;
-        margin: 0 0 16px;
       }
       h2 {
         font-size: 1.6rem;
         color: #33211d;
-        margin: 0 0 16px;
       }
       p {
         color: #555555;
         font-size: 1.3rem;
-        margin: 0 0 16px;
       }
       .textItem {
-        font-size: 1.5rem;
-        margin: 0 0 16px;
+        font-size: 1.6rem;
+
         li {
-          margin-bottom: 4px;
+          // margin-bottom: 4px;
           color: #33211d;
         }
       }
       button {
         background-color: orange;
-        // border: none;
-        // border-radius: 10px;
-        // padding: 10px;
-        // margin-bottom: 30px;
-        // width: 200px;
       }
     }
     img {

@@ -2,7 +2,6 @@ import React from "react";
 import ImgComponent from "./ImgComponent";
 import { Transition, Icon } from "../../Variants";
 import { Stack, Button } from "@mui/material";
-import { FaCheck } from "react-icons/fa"; // Importa el icono de chulo de React Icons
 import "./QuienesSomos.scss";
 
 const QuienesSomos = () => {
@@ -13,11 +12,9 @@ const QuienesSomos = () => {
         transitionTime={1}
         effectDuration={0.5}
       >
-        <div className="title">
-          <h1>
-            <b>Sirviendo </b> desde 2014
-          </h1>
-        </div>
+        <h1>
+          <b>Sirviendo </b> desde 2008
+        </h1>
       </Transition>
       <Transition
         titleClassName={"listAbout"}

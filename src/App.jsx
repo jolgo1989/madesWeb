@@ -10,9 +10,9 @@ const App = () => {
       <section id="Inicio">
         <Hero />
       </section>
-      {/* <section id="Quienes Somos">
+      <section id="Quienes Somos">
         <QuienesSomos />
-      </section> */}
+      </section>
       {/* <section id="Noticias">
         <Noticias />
       </section> */}
