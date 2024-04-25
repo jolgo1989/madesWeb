@@ -3,6 +3,7 @@ import ImgComponent from "./ImgComponent";
 import { Transition, Icon } from "../../Variants";
 import { Stack, Button } from "@mui/material";
 import "./QuienesSomos.scss";
+import { FaCheck } from "react-icons/fa6";
 
 const QuienesSomos = () => {
   return (
@@ -48,7 +49,9 @@ const QuienesSomos = () => {
             Labor diam sed ipsum et eirmod
           </p>
           <div className="textItem">
-            <li className="item">Lorem ipsum dolor sit amet</li>
+            <div className="item">
+              <FaCheck /> <li className="item">Lorem ipsum dolor sit amet</li>
+            </div>
             <li>Lorem ipsum dolor sit amet</li>
             <li>Lorem ipsum dolor sit amet</li>
           </div>

@@ -14,8 +14,9 @@
 
   .titleAbout {
     display: flex;
-    text-align: center;
+    justify-content: center;
     margin-bottom: 5%;
+    // text-align: center; colcarlo en el resposive para celular
 
     h1 {
       font-size: clamp(2.5rem, 1.2688rem + 6.0241vi, 5.9375rem);
@@ -37,13 +38,13 @@
 
   .listAbout {
     display: flex;
-    justify-content: space-around; //!este
+    justify-content: space-between; //!este
 
     .textAbout {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      // max-width: 350px;
+      max-width: 400px;
 
       h1 {
         font-size: 2.3rem;
@@ -58,6 +59,10 @@
       }
       .textItem {
         font-size: 1.6rem;
+        .item {
+          display: flex;
+          gap: 20px;
+        }
 
         li {
           // margin-bottom: 4px;
@@ -65,11 +70,14 @@
         }
       }
       button {
+        padding: 8px 24px;
+        margin: 8px 0 0;
         background-color: orange;
       }
     }
     img {
       width: 480px;
+      margin-top: 5%;
     }
   }
 }
