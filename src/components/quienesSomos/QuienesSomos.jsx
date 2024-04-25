@@ -32,7 +32,10 @@ const QuienesSomos = () => {
             Takimata sed vero vero no sit sed, justo clita duo no duo amet et,
             nonumy kasd sed dolor eos diam lorem eirmod. Amet sit amet amet no.
             Est nonumy sed labore eirmod sit magna. Erat at est justo sit ut.
-            Labor diam sed ipsum et eirmod
+            Labor diam sed ipsum et eirmod Takimata sed vero vero no sit sed,
+            justo clita duo no duo amet et, nonumy kasd sed dolor eos diam lorem
+            eirmod. Amet sit amet amet no. Est nonumy sed labore eirmod sit
+            magna. Erat at est justo sit ut. Labor diam sed ipsum et eirmod
           </p>
           <Stack spacing={2} direction="row">
             <Button variant="contained">Read more</Button>
@@ -46,7 +49,10 @@ const QuienesSomos = () => {
             Takimata sed vero vero no sit sed, justo clita duo no duo amet et,
             nonumy kasd sed dolor eos diam lorem eirmod. Amet sit amet amet no.
             Est nonumy sed labore eirmod sit magna. Erat at est justo sit ut.
-            Labor diam sed ipsum et eirmod
+            Labor diam sed ipsum et eirmod Takimata sed vero vero no sit sed,
+            justo clita duo no duo amet et, nonumy kasd sed dolor eos diam lorem
+            eirmod. Amet sit amet amet no. Est nonumy sed labore eirmod sit
+            magna. Erat at est justo sit ut. Labor diam sed ipsum et eirmod
           </p>
           <div className="textItem">
             <li>

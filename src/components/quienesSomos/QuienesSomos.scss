@@ -19,7 +19,8 @@
   .titleAbout {
     display: flex;
     justify-content: center;
-    margin-bottom: 5%;
+
+    // margin-bottom: 5%;
     // text-align: center; colcarlo en el resposive para celular
 
     h1 {
@@ -43,6 +44,7 @@
   .listAbout {
     display: flex;
     justify-content: space-between;
+    // background-color: aqua;
 
     @include tablet {
       flex-direction: column;
@@ -54,35 +56,37 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      max-width: 400px;
+      // max-width: 400px;
+      padding: 48px 12px 48px 0;
+      // background-color: aqua;
       @include tablet {
         max-width: 800px; //!Observar esto para la resolución de table
       }
 
       h1 {
-        font-size: clamp(1.375rem, 1.0437rem + 1.621vi, 2.3rem);
+        font-size: 40px;
       }
       h2 {
-        font-size: clamp(1rem, 0.7851rem + 1.0515vi, 1.6rem);
+        font-size: 20px;
         color: #33211d;
       }
       p {
         color: #555555;
-        font-size: clamp(0.875rem, 0.7228rem + 0.7448vi, 1.3rem);
+        font-size: 18px;
       }
       .textItem {
         font-size: 1.6rem;
 
         li {
-          font-size: clamp(1rem, 0.7851rem + 1.0515vi, 1.6rem);
-          svg {
-            color: #fff;
-          }
+          font-size: 20px;
           display: flex;
           gap: 20px;
           align-items: center;
           // margin-bottom: 4px;
-          color: #33211d;
+          color: #f80c7e;
+          svg {
+            color: #fff;
+          }
         }
       }
       button {
@@ -92,7 +96,10 @@
       }
     }
     img {
-      max-width: 42%;
+      max-width: 39%;
+      // min-height: 500px;
+      display: block;
+      padding: 50px 42px 0 32px;
     }
   }
 }
