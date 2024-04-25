@@ -12,6 +12,10 @@
   position: relative;
   max-width: 1366px;
 
+  @include tablet {
+    height: auto;
+  }
+
   .titleAbout {
     display: flex;
     justify-content: center;
@@ -40,27 +44,37 @@
     display: flex;
     justify-content: space-between;
 
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      // justify-content: start;
+    }
+
     .textAbout {
       display: flex;
       flex-direction: column;
       gap: 20px;
       max-width: 400px;
+      @include tablet {
+        max-width: 800px; //!Observar esto para la resolución de table
+      }
 
       h1 {
-        font-size: 2.3rem;
+        font-size: clamp(1.375rem, 1.0437rem + 1.621vi, 2.3rem);
       }
       h2 {
-        font-size: 1.6rem;
+        font-size: clamp(1rem, 0.7851rem + 1.0515vi, 1.6rem);
         color: #33211d;
       }
       p {
         color: #555555;
-        font-size: 1.3rem;
+        font-size: clamp(0.875rem, 0.7228rem + 0.7448vi, 1.3rem);
       }
       .textItem {
         font-size: 1.6rem;
 
         li {
+          font-size: clamp(1rem, 0.7851rem + 1.0515vi, 1.6rem);
           svg {
             color: #fff;
           }
@@ -72,8 +86,8 @@
         }
       }
       button {
-        padding: 8px 24px;
-        margin: 8px 0 0;
+        padding: 0.5em 1.5em;
+        margin: 0.5em 0 0;
         background-color: orange;
       }
     }
