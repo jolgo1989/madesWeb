@@ -38,7 +38,7 @@
 
   .listAbout {
     display: flex;
-    justify-content: space-between; //!este
+    justify-content: space-between;
 
     .textAbout {
       display: flex;
@@ -59,12 +59,14 @@
       }
       .textItem {
         font-size: 1.6rem;
-        .item {
-          display: flex;
-          gap: 20px;
-        }
 
         li {
+          svg {
+            color: #fff;
+          }
+          display: flex;
+          gap: 20px;
+          align-items: center;
           // margin-bottom: 4px;
           color: #33211d;
         }
@@ -76,8 +78,7 @@
       }
     }
     img {
-      width: 480px;
-      margin-top: 5%;
+      max-width: 42%;
     }
   }
 }

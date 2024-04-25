@@ -49,11 +49,16 @@ const QuienesSomos = () => {
             Labor diam sed ipsum et eirmod
           </p>
           <div className="textItem">
-            <div className="item">
-              <FaCheck /> <li className="item">Lorem ipsum dolor sit amet</li>
-            </div>
-            <li>Lorem ipsum dolor sit amet</li>
-            <li>Lorem ipsum dolor sit amet</li>
+            <li>
+              <FaCheck className="hola" />
+              Lorem ipsum dolor sit amet
+            </li>
+            <li>
+              <FaCheck /> Lorem ipsum dolor sit amet
+            </li>
+            <li>
+              <FaCheck /> Lorem ipsum dolor sit amet
+            </li>
           </div>
 
           <Stack Stack spacing={2} direction="row">
