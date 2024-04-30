@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 .newsContainer {
   background: linear-gradient(180deg, #0c0c1d, #111132);
   height: 100%;
@@ -5,49 +7,32 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-
-  .newsContainer::after {
-    position: absolute;
-    content: "";
-    width: 2px;
-    height: 70px;
-    left: 50%;
-    margin-left: 1px;
-    margin-top: 10px;
-    background-color: #da9f5b;
-  }
+  max-width: 1366px;
+  margin: auto;
 
   .title {
-    flex: 2;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 
-    .subTitle {
-      display: flex;
-      align-items: center;
-      gap: 50px;
-
-      h1 {
-        font-size: 95px;
-        font-weight: 100;
-        padding-top: 5rem;
-      }
+    @include mobile {
+      text-align: center;
     }
-  }
 
-  .title::after {
-    position: absolute;
-    content: "";
-    width: 2px;
-    height: 70px;
-    left: 50%;
-    margin-left: 1px;
-    margin-top: 10px;
-    background-color: #da9f5b;
-  }
+    h1 {
+      font-size: clamp(2.5rem, 1.2688rem + 6.0241vi, 5.9375rem);
+      font-weight: 100;
+      padding-top: 5rem;
+    }
 
-  .card {
-    margin-bottom: 40px;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 70px;
+      left: 50%;
+      margin-left: 1px;
+      margin-top: 10px;
+      background-color: #da9f5b;
+    }
   }
 }

@@ -39,7 +39,7 @@ const CardNoticias = () => {
         display: "flex",
         flexDirection: "row",
         gap: 1,
-        maxWidth: 1366,
+
         margin: "auto",
       }}
     >

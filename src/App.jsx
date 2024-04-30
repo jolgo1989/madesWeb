@@ -13,9 +13,9 @@ const App = () => {
       <section id="Quienes Somos">
         <QuienesSomos />
       </section>
-      {/* <section id="Noticias">
+      <section id="Noticias">
         <Noticias />
-      </section> */}
+      </section>
       {/* <Proyectos /> */}
       {/* <section id="Contactenos">Contacts</section> */}
     </>
