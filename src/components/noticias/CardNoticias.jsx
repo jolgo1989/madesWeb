@@ -9,13 +9,16 @@ import {
 } from "@mui/material";
 import { images } from "./NewsData";
 
-const ImgCard = ({ image }) => {
+import "./CardNoticias.scss";
+
+const ImgCard = ({ image, size }) => {
+  const className = `card-size-${size}`;
   return (
-    <Card sx={{ width: "25%" }}>
+    <Card className={className}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          // height="140"
           image={image.url}
           alt="green iguana"
         />
@@ -34,82 +37,23 @@ const ImgCard = ({ image }) => {
 
 const CardNoticias = () => {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "row",
-        gap: 1,
+    <Box className="container">
+      {images.map((image, index) => {
+        // lógica para asignar tamaños
+        // Por ejemplo, asignar tamaños basados en el índice:
+        let size;
+        if (index % 3 === 0) {
+          size = 1; // Tamaño pequeño
+        } else if (index % 3 === 1) {
+          size = 2; // Tamaño mediano
+        } else if (index % 3 === 2) {
+          size = 3; // Tamaño mediano
+        }
 
-        margin: "auto",
-      }}
-    >
-      <Box
-        sx={{ width: "70%", display: "flex", flexDirection: "column", gap: 1 }}
-      >
-        <Card>
-          <CardActionArea sx={{ display: "flex" }}>
-            <CardMedia
-              component="img"
-              height="140"
-              image="https://images.pexels.com/photos/2014342/pexels-photo-2014342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="green iguana"
-              sx={{ width: "88%" }}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Lizard
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-
-        <Box
-          sx={{
-            display: "flex",
-            gap: 1,
-          }}
-        >
-          {images.map((image, index) => (
-            <ImgCard key={index} image={image} />
-          ))}
-        </Box>
-      </Box>
-
-      <Card sx={{ width: "30%" }}>
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            height="140"
-            image="https://images.pexels.com/photos/1670045/pexels-photo-1670045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="green iguana"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Lizard
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-              molestiae! Laboriosam excepturi fugiat ex cupiditate et eius quos
-              magni reprehenderit nobis aspernatur eveniet, facere sunt unde
-              iure doloremque corrupti repellat. Lizards are a widespread group
-              of squamate reptiles, with over 6,000 species, ranging across all
-              continents except Antarctica Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Pariatur, molestiae! Laboriosam
-              excepturi fugiat ex cupiditate et eius quos magni reprehenderit
-              nobis aspernatur eveniet, facere sunt unde iure doloremque
-              corrupti repellat.
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
+        return <ImgCard key={index} image={image} size={size} />;
+      })}
     </Box>
   );
 };
 
 export default CardNoticias;
-
-// https://html5up.net/helios
