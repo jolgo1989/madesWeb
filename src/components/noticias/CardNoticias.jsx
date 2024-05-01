@@ -8,10 +8,7 @@ const ImgCard = ({ image, size }) => {
   return (
     <div className={className}>
       <img src={image.url} alt="green-iguana" />
-      <div>
-        {image.title}
-        {image.Typography}
-      </div>
+      <h1>{image.Typography}</h1>
     </div>
   );
 };
