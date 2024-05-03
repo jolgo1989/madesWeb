@@ -8,71 +8,66 @@ img {
     "card-size-1 card-size-1  card-size-2 card-size-3"
     "card-size-1 card-size-1  card-size-4 card-size-5";
   gap: 15px;
-  padding: 0 12px;
+  padding: 48px 12px 0 12px;
 
   .card-container {
-    border-radius: 1rem;
-    box-shadow: 0px 10px 8px #999;
+    // border-radius: 1rem;
+    // box-shadow: 0px 10px 8px #999;
     display: flex;
     flex-direction: column;
-    background-color: white;
-    color: black;
+    // background-color: white;
+    color: #fff;
     height: fit-content;
 
-    .card-img {
-      // width: 100%;
-      border-radius: 1rem 1rem 0 0;
-    }
+    // .card-img {
+    //   // width: 100%;
+    //   border-radius: 1rem 1rem 0 0;
+    // }
 
     .card-title {
-      margin: 0.5rem 5%;
+      margin: 0.1rem 0;
     }
     .card-description {
-      margin: 0.5rem 5%;
+      margin: 0.1rem 0;
     }
 
     .card-btn {
-      text-align: center;
-      width: 100px;
-      border-radius: 5px;
-      padding: 0.5rem 1rem;
-      background-color: #2563eb;
-      color: white;
-      text-decoration: none;
-      margin: 0.5rem 5%;
+      color: #fff;
+      margin: 0.3rem 0;
+      font-weight: bolder;
     }
   }
 
   .card-size-1 {
     grid-area: card-size-1;
     img {
-      height: 280px;
+      height: 350px;
     }
   }
 
   .card-size-2 {
     grid-area: card-size-2;
     img {
-      height: 135px;
+      height: 137px;
     }
   }
 
   .card-size-3 {
     grid-area: card-size-3;
     img {
-      height: 135px;
+      height: 137px;
     }
   }
   .card-size-4 {
     grid-area: card-size-4;
     img {
-      height: 135px;
+      height: 137px;
     }
   }
   .card-size-5 {
     grid-area: card-size-5;
     img {
-      height: 135px;
+      height: 137px;
     }
   }
 }
