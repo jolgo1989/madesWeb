@@ -6,9 +6,13 @@ import "./CardNoticias.scss";
 const ImgCard = ({ image, size }) => {
   const className = `card-size-${size}`;
   return (
-    <div className={className}>
-      <img src={image.url} alt="green-iguana" />
-      <h1>{image.Typography}</h1>
+    <div className={`${className} card-container  `}>
+      <img className="card-img" src={image.url} alt="green-iguana" />
+      <h1 className="card-title">{image.title}</h1>
+      <p className="card-description">{image.Typography}</p>
+      <a className="card-btn" href="">
+        Leer mas
+      </a>
     </div>
   );
 };
