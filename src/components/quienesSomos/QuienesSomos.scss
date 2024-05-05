@@ -27,14 +27,14 @@
     h1 {
       font-size: clamp(2.5rem, 1.2688rem + 6.0241vi, 5.9375rem);
       font-weight: 100;
-      padding-top: 5rem;
+      padding-top: 3rem;
     }
 
     &::after {
       position: absolute;
       content: "";
       width: 2px;
-      height: 70px;
+      height: 50px;
       left: 50%;
       margin-left: 1px;
       margin-top: 10px;

@@ -7,8 +7,9 @@ img {
   grid-template-areas:
     "card-size-1 card-size-1  card-size-2 card-size-3"
     "card-size-1 card-size-1  card-size-4 card-size-5";
-  gap: 15px;
+  gap: 10px;
   padding: 48px 12px 0 12px;
+  height: 100%;
 
   .card-container {
     // border-radius: 1rem;
@@ -25,15 +26,15 @@ img {
     // }
 
     .card-title {
-      margin: 0.1rem 0;
+      margin: 0.5% 0;
     }
     .card-description {
-      margin: 0.1rem 0;
+      margin: 0.5% 0;
     }
 
     .card-btn {
       color: #fff;
-      margin: 0.3rem 0;
+      margin: 1% 0;
       font-weight: bolder;
     }
   }
@@ -50,6 +51,10 @@ img {
     img {
       height: 137px;
     }
+
+    h1 {
+      font-size: clamp(1rem, 0.8209rem + 0.8762vi, 1.5rem);
+    }
   }
 
   .card-size-3 {
@@ -57,17 +62,29 @@ img {
     img {
       height: 137px;
     }
+
+    h1 {
+      font-size: clamp(1rem, 0.8209rem + 0.8762vi, 1.5rem);
+    }
   }
   .card-size-4 {
     grid-area: card-size-4;
     img {
       height: 137px;
     }
+
+    h1 {
+      font-size: clamp(1rem, 0.8209rem + 0.8762vi, 1.5rem);
+    }
   }
   .card-size-5 {
     grid-area: card-size-5;
     img {
       height: 137px;
+    }
+
+    h1 {
+      font-size: clamp(1rem, 0.8209rem + 0.8762vi, 1.5rem);
     }
   }
 }
