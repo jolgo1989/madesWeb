@@ -21,20 +21,18 @@ const CardNoticias = () => {
   return (
     <div className="container">
       {images.map((image, index) => {
-        // lógica para asignar tamaños
+        // lógica para asignar tamaños a las card
         // Por ejemplo, asignar tamaños basados en el índice:
-        let size;
-        if (index % 5 === 0) {
-          size = 1; // Tamaño pequeño
-        } else if (index % 5 === 1) {
-          size = 2; // Tamaño mediano
-        } else if (index % 5 === 2) {
-          size = 3; // Tamaño mediano
-        } else if (index % 5 === 3) {
-          size = 4;
-        } else {
-          size = 5;
-        }
+        let size =
+          index % 5 === 0
+            ? 1
+            : index % 5 === 1
+            ? 2
+            : index % 5 === 2
+            ? 3
+            : index % 5 === 3
+            ? 4
+            : 5;
 
         return <ImgCard key={index} image={image} size={size} />;
       })}
