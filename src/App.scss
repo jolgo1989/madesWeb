@@ -16,10 +16,6 @@ body {
   // linear-gradient(rgba(9, 0, 77, 0.65), rgba(9, 0, 77, 0.65)),
 }
 
-section {
-  height: 100vh;
-}
-
 @mixin mobile {
   @media (max-width: 738px) {
     @content;
@@ -34,5 +30,13 @@ section {
 @mixin desktop {
   @media (max-width: 1366px) {
     @content;
+  }
+}
+
+section {
+  height: 100vh;
+
+  @include tablet {
+    height: auto;
   }
 }

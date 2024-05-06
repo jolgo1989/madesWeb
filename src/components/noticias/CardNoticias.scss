@@ -4,7 +4,7 @@ img {
   max-width: 100%;
 }
 
-.container {
+.card-noticias__container {
   display: grid;
   grid-template-areas:
     "card-size-1 card-size-1  card-size-2 card-size-3"
@@ -26,20 +26,25 @@ img {
       "card-size-4 card-size-5";
   }
 
-  .card-container {
+  .img-card-container {
     display: flex;
     flex-direction: column;
     color: #fff;
     height: fit-content;
 
-    .card-title {
+    .img-card__title {
       margin: 0.5% 0;
+
+      h1 {
+        font-size: clamp(1rem, 0.8209rem + 0.8762vi, 1.5rem);
+      }
     }
-    .card-description {
+
+    .img-card__description {
       margin: 0.5% 0;
     }
 
-    .card-btn {
+    .img-card__button {
       color: #fff;
       margin: 1% 0;
       font-weight: bolder;
@@ -48,56 +53,53 @@ img {
 
   .card-size-1 {
     grid-area: card-size-1;
+
     img {
       height: 350px;
+
       @include tablet {
         height: 325px;
       }
-      @include tablet {
+
+      @include mobile {
         height: 255px;
       }
+    }
+
+    h1 {
+      font-size: 40px;
     }
   }
 
   .card-size-2 {
     grid-area: card-size-2;
+
     img {
       height: 137px;
-    }
-
-    h1 {
-      font-size: clamp(1rem, 0.8209rem + 0.8762vi, 1.5rem);
     }
   }
 
   .card-size-3 {
     grid-area: card-size-3;
+
     img {
       height: 137px;
     }
-
-    h1 {
-      font-size: clamp(1rem, 0.8209rem + 0.8762vi, 1.5rem);
-    }
   }
+
   .card-size-4 {
     grid-area: card-size-4;
+
     img {
       height: 137px;
-    }
-
-    h1 {
-      font-size: clamp(1rem, 0.8209rem + 0.8762vi, 1.5rem);
     }
   }
+
   .card-size-5 {
     grid-area: card-size-5;
+
     img {
       height: 137px;
-    }
-
-    h1 {
-      font-size: clamp(1rem, 0.8209rem + 0.8762vi, 1.5rem);
     }
   }
 }
