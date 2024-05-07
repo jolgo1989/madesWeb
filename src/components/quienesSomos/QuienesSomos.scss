@@ -1,7 +1,8 @@
 @import "../../App.scss";
 
 .about {
-  background: linear-gradient(180deg, #0c0c1d, #111132);
+  // background: linear-gradient(180deg, #0c0c1d, #111132);
+  background: #fbf4e0;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -25,6 +26,7 @@
       font-size: clamp(2.5rem, 1.2688rem + 6.0241vi, 5.9375rem);
       font-weight: 100;
       padding-top: 3rem;
+      color: #03111e;
     }
 
     &::after {
@@ -60,6 +62,7 @@
 
       h1 {
         font-size: 40px;
+        color: #e25b46;
       }
 
       h2 {
@@ -68,7 +71,7 @@
       }
 
       p {
-        color: #555555;
+        color: #552026;
         font-size: 18px;
       }
 
@@ -91,7 +94,7 @@
       button {
         padding: 0.5em 1.5em;
         margin: 0.5em 0 0;
-        background-color: orange;
+        background-color: #23aea8;
       }
     }
 

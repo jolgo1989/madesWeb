@@ -27,6 +27,8 @@
 
       a {
         color: #fff;
+        // line effect
+        @include lineEffect();
       }
     }
 

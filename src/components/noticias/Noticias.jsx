@@ -1,9 +1,7 @@
 // Importación del archivo de estilos Sass para este componente
 import "./Noticias.scss";
-
 // Importación del componente CardNoticias
 import CardNoticias from "./CardNoticias";
-
 // Importación del componente Transition desde el directorio "../../Variants"
 import { Transition } from "../../Variants";
 

@@ -24,7 +24,7 @@ const Hero = () => {
           {/* Íconos de redes sociales */}
           <Icon href="#" className="social__icon">
             {/* Elemento icon dentro de social */}
-            <FaInstagram /> {/* Ícono de Instagram */}
+            <FaInstagram className="ico" /> {/* Ícono de Instagram */}
           </Icon>
           <Icon href="#" className="social__icon">
             {/* Elemento icon dentro de social */}
