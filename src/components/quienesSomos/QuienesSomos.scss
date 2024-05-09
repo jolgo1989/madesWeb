@@ -1,5 +1,5 @@
 @import "../../App.scss";
-
+$color-button: #23aea8;
 .about {
   // background: linear-gradient(180deg, #0c0c1d, #111132);
   background: #fbf4e0;
@@ -94,7 +94,7 @@
       button {
         padding: 0.5em 1.5em;
         margin: 0.5em 0 0;
-        background-color: #23aea8;
+        background-color: $color-button;
       }
     }
 
