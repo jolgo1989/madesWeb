@@ -91,10 +91,18 @@ $color-button: #23aea8;
         }
       }
 
-      button {
-        padding: 0.5em 1.5em;
+      a {
+        text-align: center;
+        width: 8.063rem;
+        border-radius: 5px;
+        padding: 0.8em 1.5em;
         margin: 0.5em 0 0;
         background-color: $color-button;
+        border: none;
+        cursor: pointer;
+        font-size: 0.875rem;
+        text-decoration: none;
+        color: #fff;
       }
     }
 

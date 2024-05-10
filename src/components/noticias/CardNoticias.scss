@@ -45,9 +45,13 @@ img {
     }
 
     .img-card__button {
-      color: #fff;
       margin: 1% 0;
       font-weight: bolder;
+      a {
+        @include lineEffect();
+        text-decoration: none;
+        color: #fff;
+      }
     }
   }
 

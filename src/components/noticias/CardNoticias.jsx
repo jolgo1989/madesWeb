@@ -15,10 +15,9 @@ const ImgCard = ({ image, size }) => {
       {/* Título de la imagen con clase para estilos */}
       <p className="img-card__description">{image.typography}</p>{" "}
       {/* Descripción de la imagen con clase para estilos */}
-      <a className="img-card__button" href="#">
-        Leer más
-      </a>{" "}
-      {/* Botón para leer más con clase para estilos */}
+      <div className="img-card__button">
+        <a href=""> Leer más</a>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { Transition } from "../../Variants"; // Importa el componente Transition desde el directorio Variants
+import { Transition, Icon } from "../../Variants"; // Importa el componente Transition desde el directorio Variants
 import { Stack, Button } from "@mui/material"; // Importa los componentes Stack y Button desde Material-UI
 import "./QuienesSomos.scss"; // Importa los estilos Sass para el componente QuienesSomos
 import { FaCheck } from "react-icons/fa6"; // Importa el icono FaCheck de React Icons
@@ -43,17 +43,11 @@ const QuienesSomos = () => {
             magna. Erat at est justo sit ut. Labor diam sed ipsum et eirmod
           </p>{" "}
           {/* Párrafo de texto */}
-          <Stack spacing={2} direction="row">
-            {" "}
-            {/* Stack para los botones con espaciado horizontal */}
-            <Button variant="contained">Read more</Button>{" "}
-            {/* Botón de Material-UI */}
-          </Stack>
+          <Icon href="">LEER MAS</Icon>
         </div>
         {/*Licencia <a href="https://www.freepik.com">designed by jannoon028 - Freepik.com</a> */}
         <img src="./public/2096.png" alt="teacher" /> {/* Imagen */}
         <div className="about__text">
-          {" "}
           {/* Contenedor del texto con clase "about__text" */}
           <h1>Visión</h1> {/* Título de la sección Visión */}
           <p>
@@ -64,10 +58,9 @@ const QuienesSomos = () => {
             justo clita duo no duo amet et, nonumy kasd sed dolor eos diam lorem
             eirmod. Amet sit amet amet no. Est nonumy sed labore eirmod sit
             magna. Erat at est justo sit ut. Labor diam sed ipsum et eirmod
-          </p>{" "}
+          </p>
           {/* Párrafo de texto */}
           <div className="about__text-item">
-            {" "}
             {/* Contenedor de los ítems de texto con clase "about__text-item" */}
             <li className="about__text-item-check">
               {" "}
@@ -94,12 +87,7 @@ const QuienesSomos = () => {
             </li>{" "}
             {/* Texto del tercer ítem */}
           </div>
-          <Stack Stack spacing={2} direction="row">
-            {" "}
-            {/* Stack para los botones con espaciado horizontal */}
-            <Button variant="contained">Read more</Button>{" "}
-            {/* Botón de Material-UI */}
-          </Stack>
+          <a href="">LEER MAS</a>
         </div>
       </Transition>
     </div>
