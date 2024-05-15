@@ -1,8 +1,29 @@
 @import "../../App.scss";
-$color-button: #23aea8;
+// Colores
+$color-button: #23aea8; // Color principal para botones
+$subTitleColor: #e25b46; // Color para subtítulos
+$textColor: #03111e; // Color principal para el titulo
+$textColorSecondary: #33211d; // Color secundario para texto
+$linkColor: #f80c7e; // Color para enlaces
+$textColorButton: #fff; // Color para el texto de los botones
+$colorParagraph: #552026; // Color texto
+$lineColor: #da9f5b; // Color de fondo principal
+$aboutColor: #fbf4e0; // Color de ondo secundario
+
+// Tamaños de texto
+$h1size: clamp(2.5rem, 1.2688rem + 6.0241vi, 5.9375rem);
+$h2size: clamp(1.5625rem, 1.2267rem + 1.6429vi, 2.5rem);
+$h3size: clamp(1.125rem, 1.0802rem + 0.2191vi, 1.25rem);
+$paragraphSize: clamp(1rem, 0.9552rem + 0.2191vi, 1.125rem);
+
+// Espaciado y dimensiones
+$buttonWidth: 8.063rem; // Ancho de los botones
+$buttonPaddingY: 0.8em; // Padding vertical para los botones
+$buttonPaddingX: 1.5em; // Padding horizontal para los botones
+$buttonBorderRadius: 5px; // Radio de borde para los botones
+
 .about {
-  // background: linear-gradient(180deg, #0c0c1d, #111132);
-  background: #fbf4e0;
+  background: $aboutColor;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -19,14 +40,14 @@ $color-button: #23aea8;
     justify-content: center;
 
     @include mobile {
-      text-align: center; // Mover al mixin mobile para centrar el texto en dispositivos móviles
+      text-align: center;
     }
 
     h1 {
-      font-size: clamp(2.5rem, 1.2688rem + 6.0241vi, 5.9375rem);
+      font-size: $h1size;
       font-weight: 100;
       padding-top: 3rem;
-      color: #03111e;
+      color: $textColor;
     }
 
     &::after {
@@ -37,7 +58,7 @@ $color-button: #23aea8;
       left: 50%;
       margin-left: 1px;
       margin-top: 10px;
-      background-color: #da9f5b;
+      background-color: $lineColor;
     }
   }
 
@@ -60,49 +81,47 @@ $color-button: #23aea8;
         padding: 15px 12px;
       }
 
-      h1 {
-        font-size: 40px;
-        color: #e25b46;
+      h2 {
+        font-size: $h2size;
+        color: $subTitleColor;
       }
 
-      h2 {
-        font-size: 20px;
-        color: #33211d;
+      h3 {
+        font-size: $h3size;
+        color: $textColorSecondary;
       }
 
       p {
-        color: #552026;
-        font-size: 18px;
+        color: $colorParagraph;
+        font-size: $paragraphSize;
       }
 
       .about__text-item {
-        font-size: 1.6rem;
-
+        font-size: $h3size;
         li {
-          font-size: 20px;
           display: flex;
           gap: 8px;
           align-items: center;
-          color: #f80c7e;
+          color: $linkColor;
 
           svg {
-            color: #fff;
+            color: $linkColor;
           }
         }
       }
 
       a {
         text-align: center;
-        width: 8.063rem;
-        border-radius: 5px;
-        padding: 0.8em 1.5em;
+        width: $buttonWidth;
+        border-radius: $buttonBorderRadius;
+        padding: $buttonPaddingY $buttonPaddingX;
         margin: 0.5em 0 0;
         background-color: $color-button;
         border: none;
         cursor: pointer;
         font-size: 0.875rem;
         text-decoration: none;
-        color: #fff;
+        color: $textColorButton;
       }
     }
 

@@ -8,7 +8,6 @@ import { FaCheck } from "react-icons/fa6"; // Importa el icono FaCheck de React 
 const QuienesSomos = () => {
   return (
     <div className="about">
-      {" "}
       {/* Contenedor principal con clase "about" */}
       <Transition
         titleClassName={"about__title"} // Clase para el título de la transición
@@ -25,13 +24,12 @@ const QuienesSomos = () => {
         effectDuration={1} // Duración del efecto de transición
       >
         <div className="about__text">
-          {" "}
           {/* Contenedor del texto con clase "about__text" */}
-          <h1>Historia</h1> {/* Título de la sección Historia */}
-          <h2>
+          <h2>Historia</h2> {/* Título de la sección Historia */}
+          <h3>
             Eos kasd eos dolor vero vero, lorem stet diam rebum. Ipsum amet sed
             vero dolor sea
-          </h2>{" "}
+          </h3>
           {/* Subtítulo */}
           <p>
             Takimata sed vero vero no sit sed, justo clita duo no duo amet et,
@@ -49,7 +47,7 @@ const QuienesSomos = () => {
         <img src="./public/2096.png" alt="teacher" /> {/* Imagen */}
         <div className="about__text">
           {/* Contenedor del texto con clase "about__text" */}
-          <h1>Visión</h1> {/* Título de la sección Visión */}
+          <h2>Visión</h2> {/* Título de la sección Visión */}
           <p>
             Takimata sed vero vero no sit sed, justo clita duo no duo amet et,
             nonumy kasd sed dolor eos diam lorem eirmod. Amet sit amet amet no.
@@ -63,31 +61,28 @@ const QuienesSomos = () => {
           <div className="about__text-item">
             {/* Contenedor de los ítems de texto con clase "about__text-item" */}
             <li className="about__text-item-check">
-              {" "}
               {/* Elemento de lista con clase "about__text-item-check" */}
-              <FaCheck className="about__text-item-check-icon" />{" "}
+              <FaCheck className="about__text-item-check-icon" />
               {/* Icono FaCheck */}
               Lorem ipsum dolor sit amet
-            </li>{" "}
+            </li>
             {/* Texto del primer ítem */}
             <li className="about__text-item-check">
-              {" "}
               {/* Elemento de lista con clase "about__text-item-check" */}
-              <FaCheck className="about__text-item-check-icon" />{" "}
+              <FaCheck className="about__text-item-check-icon" />
               {/* Icono FaCheck */}
               Lorem ipsum dolor sit amet
-            </li>{" "}
+            </li>
             {/* Texto del segundo ítem */}
             <li className="about__text-item-check">
-              {" "}
               {/* Elemento de lista con clase "about__text-item-check" */}
-              <FaCheck className="about__text-item-check-icon" />{" "}
+              <FaCheck className="about__text-item-check-icon" />
               {/* Icono FaCheck */}
               Lorem ipsum dolor sit amet
-            </li>{" "}
+            </li>
             {/* Texto del tercer ítem */}
           </div>
-          <a href="">LEER MAS</a>
+          <Icon href="">LEER MAS</Icon>
         </div>
       </Transition>
     </div>
