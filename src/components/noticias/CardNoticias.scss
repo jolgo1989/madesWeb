@@ -1,5 +1,18 @@
 @import "../../App.scss";
 
+$color-paragraph: #fff; // Color texto
+$sub-title-color: #e25b46; // Color para subtítulos
+
+$h2-size: clamp(1.5625rem, 1.2267rem + 1.6429vi, 2.5rem);
+$h3-size: clamp(1rem, 0.8209rem + 0.8762vi, 1.5rem);
+
+// Espaciado y dimensiones
+$card-padding: 48px 12px 0 12px; // Padding para contenedor de tarjetas
+$img-card-height: 350px; // Altura inicial para imágenes de tarjetas
+$tablet-img-card-height: 325px; // Altura para imágenes de tarjetas en tablet
+$mobile-img-card-height: 255px; // Altura para imágenes de tarjetas en dispositivos móviles
+$img-card-size-2-height: 137px; // Altura para imágenes de tarjetas en tamaño 2
+
 img {
   max-width: 100%;
 }
@@ -10,7 +23,7 @@ img {
     "card-size-1 card-size-1  card-size-2 card-size-3"
     "card-size-1 card-size-1  card-size-4 card-size-5";
   gap: 10px;
-  padding: 48px 12px 0 12px;
+  padding: $card-padding;
   height: 100%;
 
   @include tablet {
@@ -29,15 +42,15 @@ img {
   .img-card-container {
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: $color-paragraph;
     height: fit-content;
 
     .img-card__title {
       margin: 0.5% 0;
-
-      h1 {
-        font-size: clamp(1rem, 0.8209rem + 0.8762vi, 1.5rem);
-      }
+    }
+    h2 {
+      font-size: $h3-size;
+      color: $sub-title-color;
     }
 
     .img-card__description {
@@ -50,7 +63,7 @@ img {
       a {
         @include lineEffect();
         text-decoration: none;
-        color: #fff;
+        color: $color-paragraph;
       }
     }
   }
@@ -59,18 +72,19 @@ img {
     grid-area: card-size-1;
 
     img {
-      height: 350px;
+      height: $img-card-height;
 
       @include tablet {
-        height: 325px;
+        height: $tablet-img-card-height;
       }
 
       @include mobile {
-        height: 255px;
+        height: $mobile-img-card-height;
       }
     }
 
-    h1 {
+    h2 {
+      font-size: $h2-size;
       // @include h2Styles();
     }
   }
@@ -79,7 +93,7 @@ img {
     grid-area: card-size-2;
 
     img {
-      height: 137px;
+      height: $img-card-size-2-height;
     }
   }
 

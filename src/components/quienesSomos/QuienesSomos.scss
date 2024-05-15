@@ -1,29 +1,29 @@
 @import "../../App.scss";
 // Colores
 $color-button: #23aea8; // Color principal para botones
-$subTitleColor: #e25b46; // Color para subtítulos
-$textColor: #03111e; // Color principal para el titulo
-$textColorSecondary: #33211d; // Color secundario para texto
-$linkColor: #f80c7e; // Color para enlaces
-$textColorButton: #fff; // Color para el texto de los botones
-$colorParagraph: #552026; // Color texto
-$lineColor: #da9f5b; // Color de fondo principal
-$aboutColor: #fbf4e0; // Color de ondo secundario
+$sub-title-color: #e25b46; // Color para subtítulos
+$text-color: #03111e; // Color principal para el titulo
+$text-color-secondary: #33211d; // Color secundario para texto
+$link-color: #f80c7e; // Color para enlaces
+$text-color-button: #fff; // Color para el texto de los botones
+$color-paragraph: #552026; // Color texto
+$line-color: #da9f5b; // Color de fondo principal
+$about-color: #fbf4e0; // Color de ondo secundario
 
 // Tamaños de texto
-$h1size: clamp(2.5rem, 1.2688rem + 6.0241vi, 5.9375rem);
-$h2size: clamp(1.5625rem, 1.2267rem + 1.6429vi, 2.5rem);
-$h3size: clamp(1.125rem, 1.0802rem + 0.2191vi, 1.25rem);
-$paragraphSize: clamp(1rem, 0.9552rem + 0.2191vi, 1.125rem);
+$h1-size: clamp(2.5rem, 1.2688rem + 6.0241vi, 5.9375rem);
+$h2-size: clamp(1.5625rem, 1.2267rem + 1.6429vi, 2.5rem);
+$h3-size: clamp(1.125rem, 1.0802rem + 0.2191vi, 1.25rem);
+$paragraph-size: clamp(1rem, 0.9552rem + 0.2191vi, 1.125rem);
 
 // Espaciado y dimensiones
-$buttonWidth: 8.063rem; // Ancho de los botones
-$buttonPaddingY: 0.8em; // Padding vertical para los botones
-$buttonPaddingX: 1.5em; // Padding horizontal para los botones
-$buttonBorderRadius: 5px; // Radio de borde para los botones
+$button-width: 8.063rem; // Ancho de los botones
+$button-padding-y: 0.8em; // Padding vertical para los botones
+$button-padding-x: 1.5em; // Padding horizontal para los botones
+$button-border-radius: 5px; // Radio de borde para los botones
 
 .about {
-  background: $aboutColor;
+  background: $about-color;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -44,10 +44,10 @@ $buttonBorderRadius: 5px; // Radio de borde para los botones
     }
 
     h1 {
-      font-size: $h1size;
+      font-size: $h1-size;
       font-weight: 100;
       padding-top: 3rem;
-      color: $textColor;
+      color: $text-color;
     }
 
     &::after {
@@ -58,7 +58,7 @@ $buttonBorderRadius: 5px; // Radio de borde para los botones
       left: 50%;
       margin-left: 1px;
       margin-top: 10px;
-      background-color: $lineColor;
+      background-color: $line-color;
     }
   }
 
@@ -82,46 +82,46 @@ $buttonBorderRadius: 5px; // Radio de borde para los botones
       }
 
       h2 {
-        font-size: $h2size;
-        color: $subTitleColor;
+        font-size: $h2-size;
+        color: $sub-title-color;
       }
 
       h3 {
-        font-size: $h3size;
-        color: $textColorSecondary;
+        font-size: $h3-size;
+        color: $text-color-secondary;
       }
 
       p {
-        color: $colorParagraph;
-        font-size: $paragraphSize;
+        color: $color-paragraph;
+        font-size: $paragraph-size;
       }
 
       .about__text-item {
-        font-size: $h3size;
+        font-size: $h3-size;
         li {
           display: flex;
           gap: 8px;
           align-items: center;
-          color: $linkColor;
+          color: $link-color;
 
           svg {
-            color: $linkColor;
+            color: $link-color;
           }
         }
       }
 
       a {
         text-align: center;
-        width: $buttonWidth;
-        border-radius: $buttonBorderRadius;
-        padding: $buttonPaddingY $buttonPaddingX;
+        width: $button-width;
+        border-radius: $button-border-radius;
+        padding: $button-padding-y $button-padding-x;
         margin: 0.5em 0 0;
         background-color: $color-button;
         border: none;
         cursor: pointer;
         font-size: 0.875rem;
         text-decoration: none;
-        color: $textColorButton;
+        color: $text-color-button;
       }
     }
 

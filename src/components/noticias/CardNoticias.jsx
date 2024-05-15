@@ -11,7 +11,7 @@ const ImgCard = ({ image, size }) => {
       {/* Contenedor de la tarjeta de imagen con clases dinámicas */}
       <img className="img-card__img" src={image.url} alt="green-iguana" />{" "}
       {/* Imagen con clase para estilos */}
-      <h1 className="img-card__title">{image.title}</h1>{" "}
+      <h2 className="img-card__title">{image.title}</h2>{" "}
       {/* Título de la imagen con clase para estilos */}
       <p className="img-card__description">{image.typography}</p>{" "}
       {/* Descripción de la imagen con clase para estilos */}
