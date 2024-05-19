@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { Stack, Button } from "@mui/material";
-import { Transition } from "../../Variants";
+import { Transition, Icon } from "../../Variants";
 import { items } from "./ProjectData";
 import "./Proyectos.scss";
 
@@ -28,18 +27,14 @@ const Single = ({ items }) => {
   return (
     <section>
       <div className="container">
-        <div className="wrapper">
-          <div className="imageContainer" ref={ref}>
-            <img src={items.img} alt="" />
-          </div>
-          <motion.div className="textContainer" style={{ y }}>
-            <h2>{items.title}</h2>
-            <p>{items.desc}</p>
-            <Stack spacing={2} direction="row">
-              <Button variant="contained">Read more</Button>
-            </Stack>
-          </motion.div>
+        <div className="imageContainer" ref={ref}>
+          <img src={items.img} alt="" />
         </div>
+        <motion.div className="textContainer" style={{ y }}>
+          <h2>{items.title}</h2>
+          <p>{items.desc}</p>
+          <Icon href="">LEER MAS</Icon>
+        </motion.div>
       </div>
     </section>
   );
@@ -64,7 +59,9 @@ const Proyectos = () => {
   return (
     <div id="Proyectos" className="proyectos" ref={ref}>
       <div className="progress">
-        <h1>Proyectos</h1>
+        <h1>
+          <b>Proyectos</b> etnoeducativos
+        </h1>
         {/* Div con animación de escala en X basada en el progreso del desplazamiento */}
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>

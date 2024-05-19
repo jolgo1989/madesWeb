@@ -1,3 +1,28 @@
+// $link-color: #f80c7e; // Color para enlaces
+
+// $color-paragraph: #552026; // Color texto
+// $line-color: #da9f5b; // Color de fondo principal
+
+// $h3-size: clamp(1.125rem, 1.0802rem + 0.2191vi, 1.25rem);
+
+//?LISTO
+$container-color: #fbf4e0; // Color de ondo secundario
+$sub-title-color: #e25b46; // Color para subtítulos
+$text-color: #03111e; // Color principal para el titulo
+$text-color-secondary: #33211d; // Color secundario para texto
+
+// Tamaños de texto
+$h1-size: clamp(2.5rem, 1.2688rem + 6.0241vi, 5.9375rem);
+$h2-size: clamp(1.875rem, 0.9348rem + 4.6002vi, 4.5rem);
+$paragraph-size: clamp(1rem, 0.9552rem + 0.2191vi, 1.125rem);
+
+// Espaciado y dimensiones
+$color-button: #23aea8; // Color principal para botones
+$text-color-button: #fff; // Color para el texto de los botones
+$button-width: 8.063rem; // Ancho de los botones
+$button-padding: 0.8em 1.5em; // Padding vertical para los botones
+$button-border-radius: 5px; // Radio de borde para los botones
+
 .proyectos {
   position: relative;
 
@@ -6,79 +31,91 @@
     top: 0;
     left: 0;
     text-align: center;
-    color: orange;
+    color: $text-color;
     font-size: 36px;
     max-width: 1366px; /* Agregado */
     margin: 0 auto; /* Agregado */
-
-    .progressBar {
-      height: 10px;
-      background-color: white;
-    }
+    background-color: $container-color;
+    z-index: 10;
 
     h1 {
-      padding-top: 5rem;
+      font-size: $h1-size;
+      font-weight: 100;
+      padding-top: 3rem;
     }
-  }
-
-  .progress::before {
-    position: absolute;
-    content: "";
-    width: 2px;
-    height: 70px;
-    left: 50%;
-    margin-left: 1px;
-    margin-top: 10px;
-    background-color: #da9f5b;
+    .progressBar {
+      height: 10px;
+      background-color: $color-button;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 50px;
+      left: 50%;
+      margin-left: 1px;
+      margin-top: 10px;
+      background-color: $color-button;
+    }
   }
 
   .container {
+    max-width: 1366px;
+    height: 100%;
+    width: 100%;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    gap: 50px;
     overflow: hidden;
+    background-color: $container-color;
+    padding: 0 12px;
+    // padding: 0 12px;
 
-    .wrapper {
-      max-width: 1366px;
-      height: 100%;
-      margin: auto;
+    .imageContainer {
+      flex: 1;
+      height: 50%;
+      z-index: 1; // Asegurarse de que las imágenes estén detrás de .progress
+      position: relative; // Necesario para z-index
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .textContainer {
+      flex: 1;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 50px;
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 25rem;
+      z-index: 1; // Asegurarse de que el texto esté detrás de .progress
+      position: relative; // Necesario para z-index
 
-      .imageContainer {
-        flex: 1;
-        height: 50%;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+      h2 {
+        font-size: $h2-size;
+        color: $sub-title-color;
+      }
+      p {
+        color: $text-color-secondary;
+        font-size: $paragraph-size;
       }
 
-      .textContainer {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        margin-bottom: 25rem;
-
-        h2 {
-          font-size: 72px;
-        }
-        p {
-          color: white;
-          font-size: 20px;
-        }
-
-        button {
-          background-color: orange;
-          margin-bottom: 30px;
-        }
+      a {
+        text-align: center;
+        width: $button-width;
+        border-radius: $button-border-radius;
+        padding: $button-padding;
+        margin: 0.5em 0 0;
+        background-color: $color-button;
+        border: none;
+        cursor: pointer;
+        font-size: 0.875rem;
+        text-decoration: none;
+        color: $text-color-button;
       }
     }
   }
