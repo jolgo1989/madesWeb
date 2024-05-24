@@ -10,7 +10,7 @@ $h2-size: clamp(1.25rem, 0.8023rem + 2.1906vi, 2.5rem);
 $paragraph-size: clamp(1rem, 0.8209rem + 0.8762vi, 1.5rem);
 
 .hero {
-  background-image: $hero-gradient, url(../public/madesHero.jpg);
+  background-image: $hero-gradient, url(../../../public/madesHero.jpg);
   height: 100vh;
   background-size: cover;
   background-position: center;
