@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import ToggleButton from "./toggleButton/ToggleButton";
 import { motion, useCycle } from "framer-motion";
-import "./sideBar.scss";
+import "./SideBar.scss";
 import UseDimension from "./usedimension/UseDimension";
 import Links from "./links/Links";
 
