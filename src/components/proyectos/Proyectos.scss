@@ -1,11 +1,4 @@
-// $link-color: #f80c7e; // Color para enlaces
-
-// $color-paragraph: #552026; // Color texto
-// $line-color: #da9f5b; // Color de fondo principal
-
-// $h3-size: clamp(1.125rem, 1.0802rem + 0.2191vi, 1.25rem);
-
-//?LISTO
+@import "../../App.scss";
 $container-color: #fbf4e0; // Color de ondo secundario
 $sub-title-color: #e25b46; // Color para subtítulos
 $text-color: #03111e; // Color principal para el titulo
@@ -26,7 +19,7 @@ $button-border-radius: 5px; // Radio de borde para los botones
 .proyectos {
   position: relative;
 
-  .progress {
+  .proyectos__progress {
     position: sticky;
     top: 0;
     left: 0;
@@ -43,7 +36,7 @@ $button-border-radius: 5px; // Radio de borde para los botones
       font-weight: 100;
       padding-top: 3rem;
     }
-    .progressBar {
+    .proyectos__progress-bar {
       height: 10px;
       background-color: $color-button;
     }
@@ -59,7 +52,7 @@ $button-border-radius: 5px; // Radio de borde para los botones
     }
   }
 
-  .container {
+  .proyectos__single-container {
     max-width: 1366px;
     height: 100%;
     width: 100%;
@@ -71,26 +64,30 @@ $button-border-radius: 5px; // Radio de borde para los botones
     overflow: hidden;
     background-color: $container-color;
     padding: 0 12px;
-    // padding: 0 12px;
+    @include tablet {
+      flex-direction: column;
+    }
 
-    .imageContainer {
+    .proyectos__single-imageContainer {
       flex: 1;
-      height: 50%;
       z-index: 1; // Asegurarse de que las imágenes estén detrás de .progress
       position: relative; // Necesario para z-index
-
+      @include tablet {
+        width: 70%;
+        text-align: center;
+      }
       img {
         width: 100%;
-        height: 100%;
+        height: auto;
         object-fit: cover;
       }
     }
 
-    .textContainer {
+    .proyectos__single-textContainer {
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 0.5em;
       margin-bottom: 25rem;
       z-index: 1; // Asegurarse de que el texto esté detrás de .progress
       position: relative; // Necesario para z-index

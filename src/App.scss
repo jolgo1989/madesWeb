@@ -16,8 +16,28 @@ body {
   // linear-gradient(rgba(9, 0, 77, 0.65), rgba(9, 0, 77, 0.65)),
 }
 
-@mixin mobile {
-  @media (max-width: 738px) {
+// line effect
+@mixin lineEffect() {
+  @media (min-width: 1024px) {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      margin: auto;
+      height: 3px;
+      width: 0px;
+      transition: all 0.6s ease;
+    }
+    &:hover:after {
+      width: 100%;
+      background: #23aea8;
+    }
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1366px) {
     @content;
   }
 }
@@ -27,51 +47,12 @@ body {
     @content;
   }
 }
-@mixin desktop {
-  @media (max-width: 1366px) {
+
+@mixin mobile {
+  @media (max-width: 738px) {
     @content;
   }
 }
-// line effect
-@mixin lineEffect() {
-  position: relative;
-  &:after {
-    position: absolute;
-    content: "";
-    display: block;
-    margin: auto;
-    height: 3px;
-    width: 0px;
-    transition: all 0.6s ease;
-  }
-  &:hover:after {
-    width: 100%;
-    background: #23aea8;
-  }
-}
-
-// @mixin h2Styles() {
-//   font-size: clamp(1.5625rem, 1.2267rem + 1.6429vi, 2.5rem);
-//   color: #e25b46;
-// }
-
-// @mixin lineEffect() {
-//   position: relative;
-//   &:after {
-//     content: "";
-//     display: block;
-//     position: absolute;
-//     bottom: -10px; // Ajusta la posición según sea necesario
-//     left: 0;
-//     height: 3px;
-//     width: 0px;
-//     background: #23aea8;
-//     transition: all 0.6s ease;
-//   }
-//   &:hover::after {
-//     width: 100%;
-//   }
-// }
 
 section {
   height: 100vh;

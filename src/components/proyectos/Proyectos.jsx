@@ -11,29 +11,23 @@ const Single = ({ items }) => {
   // Hook para obtener el progreso del desplazamiento
   const { scrollYProgress } = useScroll({
     target: ref,
-    // offset: ["start start", "end start"],
   });
 
   // Transformación para animar la posición en Y según el progreso del desplazamiento
-  const y = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [
-      -300,
-      300 /* Velocidad a la animación al momento de desplazarnos en el eje Y */,
-    ]
-  );
+  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
   return (
-    <section>
-      <div className="container">
-        <div className="imageContainer" ref={ref}>
-          <img src={items.img} alt="" />
+    <section className="proyectos__single">
+      <div className="proyectos__single-container">
+        <div className="proyectos__single-imageContainer" ref={ref}>
+          <img src={items.img} alt="" className="proyectos__single-image" />
         </div>
-        <motion.div className="textContainer" style={{ y }}>
-          <h2>{items.title}</h2>
-          <p>{items.desc}</p>
-          <Icon href="">LEER MAS</Icon>
+        <motion.div className="proyectos__single-textContainer" style={{ y }}>
+          <h2 className="proyectos__single-title">{items.title}</h2>
+          <p className="proyectos__single-desc">{items.desc}</p>
+          <Icon href="" className="proyectos__single-icon">
+            LEER MAS
+          </Icon>
         </motion.div>
       </div>
     </section>
@@ -45,10 +39,8 @@ const Proyectos = () => {
 
   // Hook para obtener el progreso del desplazamiento
   const { scrollYProgress } = useScroll({
-    // "end end" significa que la animación debe comenzar cuando el borde inferior del contenedor (referenciado por ref) coincide con el borde inferior del viewport.
-    // "start start" significa que la animación debe finalizar cuando el borde superior del contenedor coincide con el borde superior del viewport.
     target: ref,
-    offset: ["end end", "start start"], // La animación comienza cuando el borde inferior del contenedor coincide con el borde inferior del viewport.
+    offset: ["end end", "start start"],
   });
 
   // Animación de muelle para escalar la barra de progreso
@@ -56,16 +48,18 @@ const Proyectos = () => {
     stiffness: 100,
     damping: 30,
   });
+
   return (
     <div id="Proyectos" className="proyectos" ref={ref}>
-      <div className="progress">
-        <h1>
+      <div className="proyectos__progress">
+        <h1 className="proyectos__progress-title">
           <b>Proyectos</b> etnoeducativos
         </h1>
-        {/* Div con animación de escala en X basada en el progreso del desplazamiento */}
-        <motion.div style={{ scaleX }} className="progressBar"></motion.div>
+        <motion.div
+          style={{ scaleX }}
+          className="proyectos__progress-bar"
+        ></motion.div>
       </div>
-      {/* Mapeo a través del array de items y renderizando cada componente Single */}
       <Transition transitionTime={1.5} effectDuration={1}>
         {items.map((item) => (
           <Single items={item} key={item.id} />

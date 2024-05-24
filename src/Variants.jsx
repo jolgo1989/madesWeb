@@ -1,5 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
+import MediaMotion from "./MediaMotion";
 
 /**
  * Componente de ícono interactivo.
@@ -8,28 +9,31 @@ import { motion } from "framer-motion";
  * @param {ReactNode} children - Los elementos hijos del componente.
  */
 export const Icon = ({ href, children }) => {
+  const mediaQuery = MediaMotion();
+  const animationProps = mediaQuery
+    ? {
+        whileHover: {
+          scale: 1.1,
+          transition: {
+            type: "spring",
+            stiffness: 400,
+            damping: 10,
+          },
+        },
+        whileTap: { scale: 0.95 },
+        animate: {
+          scale: 1,
+          transition: {
+            type: "spring",
+            stiffness: 400,
+            damping: 10,
+          },
+        },
+      }
+    : { whileTap: { color: "#23aea8" } };
   return (
     // definir cómo se animan los íconos al interactuar con ellos.
-    <motion.a
-      href={href}
-      whileHover={{
-        scale: 1.1,
-        transition: {
-          type: "spring",
-          stiffness: 400,
-          damping: 10,
-        },
-      }}
-      whileTap={{ scale: 0.95 }}
-      animate={{
-        scale: 1,
-        transition: {
-          type: "spring",
-          stiffness: 400,
-          damping: 10,
-        },
-      }}
-    >
+    <motion.a href={href} {...animationProps}>
       {children}
     </motion.a>
   );
