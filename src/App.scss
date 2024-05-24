@@ -36,6 +36,21 @@ body {
   }
 }
 
+@mixin verticalLine() {
+  @media (min-width: 1024px) {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 50px;
+      left: 50%;
+      margin-left: 1px;
+      margin-top: 10px;
+      background-color: #23aea8;
+    }
+  }
+}
+
 @mixin desktop {
   @media (max-width: 1366px) {
     @content;

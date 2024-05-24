@@ -17,7 +17,7 @@ const App = () => {
         <Noticias />
       </section>
       <Proyectos />
-      <section id="Contactenos">Contacts</section>
+      {/* <section id="Contactenos">Contacts</section> */}
     </>
   );
 };

@@ -26,15 +26,7 @@
       font-weight: 100;
       padding-top: 3rem;
     }
-    &::after {
-      position: absolute;
-      content: "";
-      width: 2px;
-      height: 50px;
-      left: 50%;
-      margin-left: 1px;
-      margin-top: 10px;
-      background-color: #da9f5b;
-    }
+
+    @include verticalLine();
   }
 }

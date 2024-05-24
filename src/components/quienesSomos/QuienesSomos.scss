@@ -7,7 +7,6 @@ $text-color-secondary: #33211d; // Color secundario para texto
 $link-color: #f80c7e; // Color para enlaces
 $text-color-button: #fff; // Color para el texto de los botones
 $color-paragraph: #552026; // Color texto
-$line-color: #da9f5b; // Color de fondo principal
 $about-color: #fbf4e0; // Color de ondo secundario
 
 // Tamaños de texto
@@ -50,16 +49,7 @@ $button-border-radius: 5px; // Radio de borde para los botones
       color: $text-color;
     }
 
-    &::after {
-      position: absolute;
-      content: "";
-      width: 2px;
-      height: 50px;
-      left: 50%;
-      margin-left: 1px;
-      margin-top: 10px;
-      background-color: $line-color;
-    }
+    @include verticalLine();
   }
 
   .about__list {
