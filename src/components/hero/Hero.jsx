@@ -55,7 +55,7 @@ const Hero = () => {
           </p>
           <ArrowIcon href={`#Contactenos`}>
             {/* Componente ArrowIcon */}
-            <img src="public/arrow.png" alt="ArrowIcon" />
+            <img src="../../../public/arrow.png" alt="ArrowIcon" />
             {/* Ícono de flecha */}
           </ArrowIcon>
         </TextHero>

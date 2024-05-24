@@ -44,7 +44,7 @@ const QuienesSomos = () => {
           <Icon href="">LEER MAS</Icon>
         </div>
         {/*Licencia <a href="https://www.freepik.com">designed by jannoon028 - Freepik.com</a> */}
-        <img src="./public/2096.png" alt="teacher" /> {/* Imagen */}
+        <img src="../../../public/book.png" alt="teacher" /> {/* Imagen */}
         <div className="about__text">
           {/* Contenedor del texto con clase "about__text" */}
           <h2>Visión</h2> {/* Título de la sección Visión */}
