@@ -53,7 +53,7 @@ const Proyectos = () => {
     <div id="Proyectos" className="proyectos" ref={ref}>
       <div className="proyectos__progress">
         <h1 className="proyectos__progress-title">
-          <b>Nuevos Proyectos</b> etnoeducativos
+          <b>Proyectos</b> etnoeducativos
         </h1>
         <motion.div
           style={{ scaleX }}
