@@ -1,5 +1,6 @@
 import React from "react"; // Importación del módulo React
 import "./Hero.scss"; // Importación del archivo de estilos Hero.scss
+import arroweImage from "../../assets/arrow.png";
 import {
   // Importación de iconos de la librería react-icons/fa6
   FaSquareXTwitter,
@@ -55,7 +56,7 @@ const Hero = () => {
           </p>
           <ArrowIcon href={`#Contactenos`}>
             {/* Componente ArrowIcon */}
-            <img src="../../../public/arrow.png" alt="ArrowIcon" />
+            <img src={arroweImage} alt="ArrowIcon" />
             {/* Ícono de flecha */}
           </ArrowIcon>
         </TextHero>

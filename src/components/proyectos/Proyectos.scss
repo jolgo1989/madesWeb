@@ -40,16 +40,7 @@ $button-border-radius: 5px; // Radio de borde para los botones
       height: 10px;
       background-color: $color-button;
     }
-    &::before {
-      position: absolute;
-      content: "";
-      width: 2px;
-      height: 50px;
-      left: 50%;
-      margin-left: 1px;
-      margin-top: 10px;
-      background-color: $color-button;
-    }
+    @include verticalLine(before);
   }
 
   .proyectos__single-container {

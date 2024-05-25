@@ -49,7 +49,7 @@ $button-border-radius: 5px; // Radio de borde para los botones
       color: $text-color;
     }
 
-    @include verticalLine();
+    @include verticalLine(after);
   }
 
   .about__list {

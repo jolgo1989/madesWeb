@@ -3,6 +3,7 @@ import { Transition, Icon } from "../../Variants"; // Importa el componente Tran
 import { Stack, Button } from "@mui/material"; // Importa los componentes Stack y Button desde Material-UI
 import "./QuienesSomos.scss"; // Importa los estilos Sass para el componente QuienesSomos
 import { FaCheck } from "react-icons/fa6"; // Importa el icono FaCheck de React Icons
+import bookImage from "../../assets/book.png";
 
 // Componente funcional QuienesSomos que representa la sección "Acerca de nosotros"
 const QuienesSomos = () => {
@@ -44,7 +45,7 @@ const QuienesSomos = () => {
           <Icon href="">LEER MAS</Icon>
         </div>
         {/*Licencia <a href="https://www.freepik.com">designed by jannoon028 - Freepik.com</a> */}
-        <img src="../../../public/book.png" alt="teacher" /> {/* Imagen */}
+        <img src={bookImage} alt="teacher" /> {/* Imagen */}
         <div className="about__text">
           {/* Contenedor del texto con clase "about__text" */}
           <h2>Visión</h2> {/* Título de la sección Visión */}
