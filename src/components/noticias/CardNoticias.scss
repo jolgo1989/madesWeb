@@ -7,7 +7,7 @@ $h2-size: clamp(1.5625rem, 1.2267rem + 1.6429vi, 2.5rem);
 $h3-size: clamp(1rem, 0.8209rem + 0.8762vi, 1.5rem);
 
 // Espaciado y dimensiones
-$card-padding: 48px 12px 0 12px; // Padding para contenedor de tarjetas
+$card-padding: 0 12px; // Padding para contenedor de tarjetas
 $img-card-height: 350px; // Altura inicial para imágenes de tarjetas
 $tablet-img-card-height: 325px; // Altura para imágenes de tarjetas en tablet
 $mobile-img-card-height: 255px; // Altura para imágenes de tarjetas en dispositivos móviles
